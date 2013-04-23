@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @migration.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @migration.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @migration.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @migration.deleted %>
+</p>
+
+<p>
+  <b>Source compute:</b>
+  <%= @migration.source_compute %>
+</p>
+
+<p>
+  <b>Dest compute:</b>
+  <%= @migration.dest_compute %>
+</p>
+
+<p>
+  <b>Dest host:</b>
+  <%= @migration.dest_host %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @migration.status %>
+</p>
+
+<p>
+  <b>Instance uuid:</b>
+  <%= @migration.instance_uuid %>
+</p>
+
+<p>
+  <b>Old instance type:</b>
+  <%= @migration.old_instance_type_id %>
+</p>
+
+<p>
+  <b>New instance type:</b>
+  <%= @migration.new_instance_type_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_migration_path(@migration) %> |
+<%= link_to 'Back', migrations_path %>

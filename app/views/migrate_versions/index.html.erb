@@ -1,0 +1,27 @@
+<h1>Listing migrate_versions</h1>
+
+<table>
+  <tr>
+    <th>Repository</th>
+    <th>Repository path</th>
+    <th>Version</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @migrate_versions.each do |migrate_version| %>
+  <tr>
+    <td><%= migrate_version.repository_id %></td>
+    <td><%= migrate_version.repository_path %></td>
+    <td><%= migrate_version.version %></td>
+    <td><%= link_to 'Show', migrate_version %></td>
+    <td><%= link_to 'Edit', edit_migrate_version_path(migrate_version) %></td>
+    <td><%= link_to 'Destroy', migrate_version, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Migrate version', new_migrate_version_path %>

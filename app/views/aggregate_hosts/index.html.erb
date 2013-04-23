@@ -1,0 +1,33 @@
+<h1>Listing aggregate_hosts</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Host</th>
+    <th>Aggregate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aggregate_hosts.each do |aggregate_host| %>
+  <tr>
+    <td><%= aggregate_host.created_at %></td>
+    <td><%= aggregate_host.updated_at %></td>
+    <td><%= aggregate_host.deleted_at %></td>
+    <td><%= aggregate_host.deleted %></td>
+    <td><%= aggregate_host.host %></td>
+    <td><%= aggregate_host.aggregate_id %></td>
+    <td><%= link_to 'Show', aggregate_host %></td>
+    <td><%= link_to 'Edit', edit_aggregate_host_path(aggregate_host) %></td>
+    <td><%= link_to 'Destroy', aggregate_host, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Aggregate host', new_aggregate_host_path %>

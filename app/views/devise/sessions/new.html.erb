@@ -1,0 +1,25 @@
+
+<% content_for :head do %>
+<%= stylesheet_link_tag 'user.css.scss' -%>
+<% end %>
+
+</br></br>
+<div class="form-signin">
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :class => "form-signin" ) do |f| %>
+
+  <h2 class="form-signin-heading">Sign in</h2>
+
+  <div><%= f.email_field :email, :autofocus => true, :class => "input-block-level",  :placeholder => "Email address" %></div>
+
+  <div><%= f.password_field :password, :class => "input-block-level",  :placeholder => "Password" %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> Remember me </br></br></div>
+  <% end %>
+
+  <div><%= f.submit "Sign in", :class => "btn btn-large btn-primary" %></div>
+<% end %>
+
+</div>
+<%= render "devise/shared/links" %>
+

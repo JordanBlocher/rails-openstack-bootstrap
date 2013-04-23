@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @certificate.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @certificate.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @certificate.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @certificate.deleted %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @certificate.user_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @certificate.project_id %>
+</p>
+
+<p>
+  <b>File name:</b>
+  <%= @certificate.file_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_certificate_path(@certificate) %> |
+<%= link_to 'Back', certificates_path %>

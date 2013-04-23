@@ -1,0 +1,33 @@
+<h1>Listing instance_info_caches</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Network info</th>
+    <th>Instance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instance_info_caches.each do |instance_info_cach| %>
+  <tr>
+    <td><%= instance_info_cach.created_at %></td>
+    <td><%= instance_info_cach.updated_at %></td>
+    <td><%= instance_info_cach.deleted_at %></td>
+    <td><%= instance_info_cach.deleted %></td>
+    <td><%= instance_info_cach.network_info %></td>
+    <td><%= instance_info_cach.instance_id %></td>
+    <td><%= link_to 'Show', instance_info_cach %></td>
+    <td><%= link_to 'Edit', edit_instance_info_cach_path(instance_info_cach) %></td>
+    <td><%= link_to 'Destroy', instance_info_cach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instance info cach', new_instance_info_cach_path %>

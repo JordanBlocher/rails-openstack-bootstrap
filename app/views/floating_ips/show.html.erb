@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @floating_ip.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @floating_ip.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @floating_ip.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @floating_ip.deleted %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @floating_ip.address %>
+</p>
+
+<p>
+  <b>Fixed ip:</b>
+  <%= @floating_ip.fixed_ip_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @floating_ip.project_id %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @floating_ip.host %>
+</p>
+
+<p>
+  <b>Auto assigned:</b>
+  <%= @floating_ip.auto_assigned %>
+</p>
+
+<p>
+  <b>Pool:</b>
+  <%= @floating_ip.pool %>
+</p>
+
+<p>
+  <b>Interface:</b>
+  <%= @floating_ip.interface %>
+</p>
+
+
+<%= link_to 'Edit', edit_floating_ip_path(@floating_ip) %> |
+<%= link_to 'Back', floating_ips_path %>

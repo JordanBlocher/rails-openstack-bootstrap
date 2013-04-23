@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  created_at: 2013-04-21 13:36:02
+  updated_at: 2013-04-21 13:36:02
+  deleted_at: 2013-04-21 13:36:02
+  deleted: false
+  injected: false
+  cidr: MyString
+  netmask: MyString
+  bridge: MyString
+  gateway: MyString
+  broadcast: MyString
+  dns1: MyString
+  vlan: 1
+  vpn_public_address: MyString
+  vpn_public_port: 1
+  vpn_private_address: MyString
+  dhcp_start: MyString
+  project_id: MyString
+  host: MyString
+  cidr_v6: MyString
+  gateway_v6: MyString
+  label: MyString
+  netmask_v6: MyString
+  bridge_interface: MyString
+  multi_host: false
+  dns2: MyString
+  uuid: MyString
+  priority: 1
+  rxtx_base: 1
+
+two:
+  created_at: 2013-04-21 13:36:02
+  updated_at: 2013-04-21 13:36:02
+  deleted_at: 2013-04-21 13:36:02
+  deleted: false
+  injected: false
+  cidr: MyString
+  netmask: MyString
+  bridge: MyString
+  gateway: MyString
+  broadcast: MyString
+  dns1: MyString
+  vlan: 1
+  vpn_public_address: MyString
+  vpn_public_port: 1
+  vpn_private_address: MyString
+  dhcp_start: MyString
+  project_id: MyString
+  host: MyString
+  cidr_v6: MyString
+  gateway_v6: MyString
+  label: MyString
+  netmask_v6: MyString
+  bridge_interface: MyString
+  multi_host: false
+  dns2: MyString
+  uuid: MyString
+  priority: 1
+  rxtx_base: 1

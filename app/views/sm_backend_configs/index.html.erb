@@ -1,0 +1,37 @@
+<h1>Listing sm_backend_configs</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Flavor</th>
+    <th>Sr uuid</th>
+    <th>Sr type</th>
+    <th>Config params</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sm_backend_configs.each do |sm_backend_config| %>
+  <tr>
+    <td><%= sm_backend_config.created_at %></td>
+    <td><%= sm_backend_config.updated_at %></td>
+    <td><%= sm_backend_config.deleted_at %></td>
+    <td><%= sm_backend_config.deleted %></td>
+    <td><%= sm_backend_config.flavor_id %></td>
+    <td><%= sm_backend_config.sr_uuid %></td>
+    <td><%= sm_backend_config.sr_type %></td>
+    <td><%= sm_backend_config.config_params %></td>
+    <td><%= link_to 'Show', sm_backend_config %></td>
+    <td><%= link_to 'Edit', edit_sm_backend_config_path(sm_backend_config) %></td>
+    <td><%= link_to 'Destroy', sm_backend_config, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sm backend config', new_sm_backend_config_path %>

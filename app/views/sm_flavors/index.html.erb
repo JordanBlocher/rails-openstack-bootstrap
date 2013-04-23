@@ -1,0 +1,33 @@
+<h1>Listing sm_flavors</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Label</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sm_flavors.each do |sm_flavor| %>
+  <tr>
+    <td><%= sm_flavor.created_at %></td>
+    <td><%= sm_flavor.updated_at %></td>
+    <td><%= sm_flavor.deleted_at %></td>
+    <td><%= sm_flavor.deleted %></td>
+    <td><%= sm_flavor.label %></td>
+    <td><%= sm_flavor.description %></td>
+    <td><%= link_to 'Show', sm_flavor %></td>
+    <td><%= link_to 'Edit', edit_sm_flavor_path(sm_flavor) %></td>
+    <td><%= link_to 'Destroy', sm_flavor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sm flavor', new_sm_flavor_path %>

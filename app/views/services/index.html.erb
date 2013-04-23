@@ -1,0 +1,41 @@
+<h1>Listing services</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Host</th>
+    <th>Binary</th>
+    <th>Topic</th>
+    <th>Report count</th>
+    <th>Disabled</th>
+    <th>Availability zone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @services.each do |service| %>
+  <tr>
+    <td><%= service.created_at %></td>
+    <td><%= service.updated_at %></td>
+    <td><%= service.deleted_at %></td>
+    <td><%= service.deleted %></td>
+    <td><%= service.host %></td>
+    <td><%= service.binary %></td>
+    <td><%= service.topic %></td>
+    <td><%= service.report_count %></td>
+    <td><%= service.disabled %></td>
+    <td><%= service.availability_zone %></td>
+    <td><%= link_to 'Show', service %></td>
+    <td><%= link_to 'Edit', edit_service_path(service) %></td>
+    <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Service', new_service_path %>

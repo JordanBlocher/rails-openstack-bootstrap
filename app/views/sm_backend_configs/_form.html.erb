@@ -1,0 +1,49 @@
+<%= form_for(@sm_backend_config) do |f| %>
+  <% if @sm_backend_config.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sm_backend_config.errors.count, "error") %> prohibited this sm_backend_config from being saved:</h2>
+
+      <ul>
+      <% @sm_backend_config.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_id %><br />
+    <%= f.number_field :flavor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sr_uuid %><br />
+    <%= f.text_field :sr_uuid %>
+  </div>
+  <div class="field">
+    <%= f.label :sr_type %><br />
+    <%= f.text_field :sr_type %>
+  </div>
+  <div class="field">
+    <%= f.label :config_params %><br />
+    <%= f.text_field :config_params %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

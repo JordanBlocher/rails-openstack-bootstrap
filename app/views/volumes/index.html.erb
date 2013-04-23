@@ -1,0 +1,69 @@
+<h1>Listing volumes</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Ec2</th>
+    <th>User</th>
+    <th>Project</th>
+    <th>Host</th>
+    <th>Size</th>
+    <th>Availability zone</th>
+    <th>Instance</th>
+    <th>Mountpoint</th>
+    <th>Attach time</th>
+    <th>Status</th>
+    <th>Attach status</th>
+    <th>Scheduled at</th>
+    <th>Launched at</th>
+    <th>Terminated at</th>
+    <th>Display name</th>
+    <th>Display description</th>
+    <th>Provider location</th>
+    <th>Provider auth</th>
+    <th>Snapshot</th>
+    <th>Volume type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @volumes.each do |volume| %>
+  <tr>
+    <td><%= volume.created_at %></td>
+    <td><%= volume.updated_at %></td>
+    <td><%= volume.deleted_at %></td>
+    <td><%= volume.deleted %></td>
+    <td><%= volume.ec2_id %></td>
+    <td><%= volume.user_id %></td>
+    <td><%= volume.project_id %></td>
+    <td><%= volume.host %></td>
+    <td><%= volume.size %></td>
+    <td><%= volume.availability_zone %></td>
+    <td><%= volume.instance_id %></td>
+    <td><%= volume.mountpoint %></td>
+    <td><%= volume.attach_time %></td>
+    <td><%= volume.status %></td>
+    <td><%= volume.attach_status %></td>
+    <td><%= volume.scheduled_at %></td>
+    <td><%= volume.launched_at %></td>
+    <td><%= volume.terminated_at %></td>
+    <td><%= volume.display_name %></td>
+    <td><%= volume.display_description %></td>
+    <td><%= volume.provider_location %></td>
+    <td><%= volume.provider_auth %></td>
+    <td><%= volume.snapshot_id %></td>
+    <td><%= volume.volume_type_id %></td>
+    <td><%= link_to 'Show', volume %></td>
+    <td><%= link_to 'Edit', edit_volume_path(volume) %></td>
+    <td><%= link_to 'Destroy', volume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Volume', new_volume_path %>

@@ -1,0 +1,45 @@
+<%= form_for(@quotum) do |f| %>
+  <% if @quotum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quotum.errors.count, "error") %> prohibited this quotum from being saved:</h2>
+
+      <ul>
+      <% @quotum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :resource %><br />
+    <%= f.text_field :resource %>
+  </div>
+  <div class="field">
+    <%= f.label :hard_limit %><br />
+    <%= f.number_field :hard_limit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  created_at: 2013-04-21 13:36:20
+  updated_at: 2013-04-21 13:36:20
+  deleted_at: 2013-04-21 13:36:20
+  deleted: false
+  name: MyString
+  description: MyString
+  project_manager: MyString
+
+two:
+  created_at: 2013-04-21 13:36:20
+  updated_at: 2013-04-21 13:36:20
+  deleted_at: 2013-04-21 13:36:20
+  deleted: false
+  name: MyString
+  description: MyString
+  project_manager: MyString

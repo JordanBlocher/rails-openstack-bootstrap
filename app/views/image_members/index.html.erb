@@ -1,0 +1,35 @@
+<h1>Listing image_members</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Member</th>
+    <th>Can share</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @image_members.each do |image_member| %>
+  <tr>
+    <td><%= image_member.image_id %></td>
+    <td><%= image_member.member %></td>
+    <td><%= image_member.can_share %></td>
+    <td><%= image_member.created_at %></td>
+    <td><%= image_member.updated_at %></td>
+    <td><%= image_member.deleted_at %></td>
+    <td><%= image_member.deleted %></td>
+    <td><%= link_to 'Show', image_member %></td>
+    <td><%= link_to 'Edit', edit_image_member_path(image_member) %></td>
+    <td><%= link_to 'Destroy', image_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Image member', new_image_member_path %>

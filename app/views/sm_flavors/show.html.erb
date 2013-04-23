@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @sm_flavor.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @sm_flavor.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @sm_flavor.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @sm_flavor.deleted %>
+</p>
+
+<p>
+  <b>Label:</b>
+  <%= @sm_flavor.label %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @sm_flavor.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_sm_flavor_path(@sm_flavor) %> |
+<%= link_to 'Back', sm_flavors_path %>

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @agent_build.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @agent_build.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @agent_build.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @agent_build.deleted %>
+</p>
+
+<p>
+  <b>Hypervisor:</b>
+  <%= @agent_build.hypervisor %>
+</p>
+
+<p>
+  <b>Os:</b>
+  <%= @agent_build.os %>
+</p>
+
+<p>
+  <b>Architecture:</b>
+  <%= @agent_build.architecture %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @agent_build.version %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @agent_build.url %>
+</p>
+
+<p>
+  <b>Md5hash:</b>
+  <%= @agent_build.md5hash %>
+</p>
+
+
+<%= link_to 'Edit', edit_agent_build_path(@agent_build) %> |
+<%= link_to 'Back', agent_builds_path %>

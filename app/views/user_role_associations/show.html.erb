@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @user_role_association.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @user_role_association.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @user_role_association.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @user_role_association.deleted %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @user_role_association.user_id %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @user_role_association.role %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_role_association_path(@user_role_association) %> |
+<%= link_to 'Back', user_role_associations_path %>

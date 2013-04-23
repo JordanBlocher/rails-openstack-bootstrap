@@ -1,0 +1,35 @@
+<h1>Listing aggregate_metadata</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Aggregate</th>
+    <th>Key</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aggregate_metadata.each do |aggregate_metadatum| %>
+  <tr>
+    <td><%= aggregate_metadatum.created_at %></td>
+    <td><%= aggregate_metadatum.updated_at %></td>
+    <td><%= aggregate_metadatum.deleted_at %></td>
+    <td><%= aggregate_metadatum.deleted %></td>
+    <td><%= aggregate_metadatum.aggregate_id %></td>
+    <td><%= aggregate_metadatum.key %></td>
+    <td><%= aggregate_metadatum.value %></td>
+    <td><%= link_to 'Show', aggregate_metadatum %></td>
+    <td><%= link_to 'Edit', edit_aggregate_metadatum_path(aggregate_metadatum) %></td>
+    <td><%= link_to 'Destroy', aggregate_metadatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Aggregate metadatum', new_aggregate_metadatum_path %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  created_at: 2013-04-21 12:39:15
+  updated_at: 2013-04-21 12:39:15
+  deleted_at: 2013-04-21 12:39:15
+  deleted: false
+  address: MyString
+  username: MyString
+  password: MyString
+  console_type: MyString
+  public_hostname: MyString
+  host: MyString
+  compute_host: MyString
+
+two:
+  created_at: 2013-04-21 12:39:15
+  updated_at: 2013-04-21 12:39:15
+  deleted_at: 2013-04-21 12:39:15
+  deleted: false
+  address: MyString
+  username: MyString
+  password: MyString
+  console_type: MyString
+  public_hostname: MyString
+  host: MyString
+  compute_host: MyString

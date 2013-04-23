@@ -1,0 +1,45 @@
+<h1>Listing fixed_ips</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Address</th>
+    <th>Network</th>
+    <th>Instance</th>
+    <th>Allocated</th>
+    <th>Leased</th>
+    <th>Reserved</th>
+    <th>Virtual interface</th>
+    <th>Host</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fixed_ips.each do |fixed_ip| %>
+  <tr>
+    <td><%= fixed_ip.created_at %></td>
+    <td><%= fixed_ip.updated_at %></td>
+    <td><%= fixed_ip.deleted_at %></td>
+    <td><%= fixed_ip.deleted %></td>
+    <td><%= fixed_ip.address %></td>
+    <td><%= fixed_ip.network_id %></td>
+    <td><%= fixed_ip.instance_id %></td>
+    <td><%= fixed_ip.allocated %></td>
+    <td><%= fixed_ip.leased %></td>
+    <td><%= fixed_ip.reserved %></td>
+    <td><%= fixed_ip.virtual_interface_id %></td>
+    <td><%= fixed_ip.host %></td>
+    <td><%= link_to 'Show', fixed_ip %></td>
+    <td><%= link_to 'Edit', edit_fixed_ip_path(fixed_ip) %></td>
+    <td><%= link_to 'Destroy', fixed_ip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fixed ip', new_fixed_ip_path %>

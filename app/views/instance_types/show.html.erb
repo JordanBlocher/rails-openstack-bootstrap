@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @instance_type.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @instance_type.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @instance_type.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @instance_type.deleted %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @instance_type.name %>
+</p>
+
+<p>
+  <b>Memory mb:</b>
+  <%= @instance_type.memory_mb %>
+</p>
+
+<p>
+  <b>Vcpus:</b>
+  <%= @instance_type.vcpus %>
+</p>
+
+<p>
+  <b>Swap:</b>
+  <%= @instance_type.swap %>
+</p>
+
+<p>
+  <b>Vcpu weight:</b>
+  <%= @instance_type.vcpu_weight %>
+</p>
+
+<p>
+  <b>Flavorid:</b>
+  <%= @instance_type.flavorid %>
+</p>
+
+<p>
+  <b>Rxtx factor:</b>
+  <%= @instance_type.rxtx_factor %>
+</p>
+
+<p>
+  <b>Root gb:</b>
+  <%= @instance_type.root_gb %>
+</p>
+
+<p>
+  <b>Ephemeral gb:</b>
+  <%= @instance_type.ephemeral_gb %>
+</p>
+
+
+<%= link_to 'Edit', edit_instance_type_path(@instance_type) %> |
+<%= link_to 'Back', instance_types_path %>

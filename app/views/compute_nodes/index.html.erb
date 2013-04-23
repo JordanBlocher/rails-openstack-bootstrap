@@ -1,0 +1,61 @@
+<h1>Listing compute_nodes</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Service</th>
+    <th>Vcpus</th>
+    <th>Memory mb</th>
+    <th>Local gb</th>
+    <th>Vcpus used</th>
+    <th>Memory mb used</th>
+    <th>Local gb used</th>
+    <th>Hypervisor type</th>
+    <th>Hypervisor version</th>
+    <th>Cpu info</th>
+    <th>Disk available least</th>
+    <th>Free ram mb</th>
+    <th>Free disk gb</th>
+    <th>Current workload</th>
+    <th>Running vms</th>
+    <th>Hypervisor hostname</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @compute_nodes.each do |compute_node| %>
+  <tr>
+    <td><%= compute_node.created_at %></td>
+    <td><%= compute_node.updated_at %></td>
+    <td><%= compute_node.deleted_at %></td>
+    <td><%= compute_node.deleted %></td>
+    <td><%= compute_node.service_id %></td>
+    <td><%= compute_node.vcpus %></td>
+    <td><%= compute_node.memory_mb %></td>
+    <td><%= compute_node.local_gb %></td>
+    <td><%= compute_node.vcpus_used %></td>
+    <td><%= compute_node.memory_mb_used %></td>
+    <td><%= compute_node.local_gb_used %></td>
+    <td><%= compute_node.hypervisor_type %></td>
+    <td><%= compute_node.hypervisor_version %></td>
+    <td><%= compute_node.cpu_info %></td>
+    <td><%= compute_node.disk_available_least %></td>
+    <td><%= compute_node.free_ram_mb %></td>
+    <td><%= compute_node.free_disk_gb %></td>
+    <td><%= compute_node.current_workload %></td>
+    <td><%= compute_node.running_vms %></td>
+    <td><%= compute_node.hypervisor_hostname %></td>
+    <td><%= link_to 'Show', compute_node %></td>
+    <td><%= link_to 'Edit', edit_compute_node_path(compute_node) %></td>
+    <td><%= link_to 'Destroy', compute_node, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Compute node', new_compute_node_path %>

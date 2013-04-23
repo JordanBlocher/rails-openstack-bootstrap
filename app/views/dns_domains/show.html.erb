@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Domain:</b>
+  <%= @dns_domain.domain %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @dns_domain.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @dns_domain.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @dns_domain.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @dns_domain.deleted %>
+</p>
+
+<p>
+  <b>Scope:</b>
+  <%= @dns_domain.scope %>
+</p>
+
+<p>
+  <b>Availability zone:</b>
+  <%= @dns_domain.availability_zone %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @dns_domain.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_dns_domain_path(@dns_domain) %> |
+<%= link_to 'Back', dns_domains_path %>

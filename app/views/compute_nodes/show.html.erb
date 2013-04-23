@@ -1,0 +1,105 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @compute_node.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @compute_node.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @compute_node.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @compute_node.deleted %>
+</p>
+
+<p>
+  <b>Service:</b>
+  <%= @compute_node.service_id %>
+</p>
+
+<p>
+  <b>Vcpus:</b>
+  <%= @compute_node.vcpus %>
+</p>
+
+<p>
+  <b>Memory mb:</b>
+  <%= @compute_node.memory_mb %>
+</p>
+
+<p>
+  <b>Local gb:</b>
+  <%= @compute_node.local_gb %>
+</p>
+
+<p>
+  <b>Vcpus used:</b>
+  <%= @compute_node.vcpus_used %>
+</p>
+
+<p>
+  <b>Memory mb used:</b>
+  <%= @compute_node.memory_mb_used %>
+</p>
+
+<p>
+  <b>Local gb used:</b>
+  <%= @compute_node.local_gb_used %>
+</p>
+
+<p>
+  <b>Hypervisor type:</b>
+  <%= @compute_node.hypervisor_type %>
+</p>
+
+<p>
+  <b>Hypervisor version:</b>
+  <%= @compute_node.hypervisor_version %>
+</p>
+
+<p>
+  <b>Cpu info:</b>
+  <%= @compute_node.cpu_info %>
+</p>
+
+<p>
+  <b>Disk available least:</b>
+  <%= @compute_node.disk_available_least %>
+</p>
+
+<p>
+  <b>Free ram mb:</b>
+  <%= @compute_node.free_ram_mb %>
+</p>
+
+<p>
+  <b>Free disk gb:</b>
+  <%= @compute_node.free_disk_gb %>
+</p>
+
+<p>
+  <b>Current workload:</b>
+  <%= @compute_node.current_workload %>
+</p>
+
+<p>
+  <b>Running vms:</b>
+  <%= @compute_node.running_vms %>
+</p>
+
+<p>
+  <b>Hypervisor hostname:</b>
+  <%= @compute_node.hypervisor_hostname %>
+</p>
+
+
+<%= link_to 'Edit', edit_compute_node_path(@compute_node) %> |
+<%= link_to 'Back', compute_nodes_path %>

@@ -1,0 +1,213 @@
+<%= form_for(@instance) do |f| %>
+  <% if @instance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instance.errors.count, "error") %> prohibited this instance from being saved:</h2>
+
+      <ul>
+      <% @instance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_id %><br />
+    <%= f.number_field :internal_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :image_ref %><br />
+    <%= f.text_field :image_ref %>
+  </div>
+  <div class="field">
+    <%= f.label :kernel_id %><br />
+    <%= f.text_field :kernel_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ramdisk_id %><br />
+    <%= f.text_field :ramdisk_id %>
+  </div>
+  <div class="field">
+    <%= f.label :server_name %><br />
+    <%= f.text_field :server_name %>
+  </div>
+  <div class="field">
+    <%= f.label :launch_index %><br />
+    <%= f.number_field :launch_index %>
+  </div>
+  <div class="field">
+    <%= f.label :key_name %><br />
+    <%= f.text_field :key_name %>
+  </div>
+  <div class="field">
+    <%= f.label :key_data %><br />
+    <%= f.text_area :key_data %>
+  </div>
+  <div class="field">
+    <%= f.label :power_state %><br />
+    <%= f.number_field :power_state %>
+  </div>
+  <div class="field">
+    <%= f.label :vm_state %><br />
+    <%= f.text_field :vm_state %>
+  </div>
+  <div class="field">
+    <%= f.label :memory_mb %><br />
+    <%= f.number_field :memory_mb %>
+  </div>
+  <div class="field">
+    <%= f.label :vcpus %><br />
+    <%= f.number_field :vcpus %>
+  </div>
+  <div class="field">
+    <%= f.label :hostname %><br />
+    <%= f.text_field :hostname %>
+  </div>
+  <div class="field">
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
+    <%= f.label :user_data %><br />
+    <%= f.text_area :user_data %>
+  </div>
+  <div class="field">
+    <%= f.label :reservation_id %><br />
+    <%= f.text_field :reservation_id %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled_at %><br />
+    <%= f.datetime_select :scheduled_at %>
+  </div>
+  <div class="field">
+    <%= f.label :launched_at %><br />
+    <%= f.datetime_select :launched_at %>
+  </div>
+  <div class="field">
+    <%= f.label :terminated_at %><br />
+    <%= f.datetime_select :terminated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :display_name %><br />
+    <%= f.text_field :display_name %>
+  </div>
+  <div class="field">
+    <%= f.label :display_description %><br />
+    <%= f.text_field :display_description %>
+  </div>
+  <div class="field">
+    <%= f.label :availability_zone %><br />
+    <%= f.text_field :availability_zone %>
+  </div>
+  <div class="field">
+    <%= f.label :locked %><br />
+    <%= f.check_box :locked %>
+  </div>
+  <div class="field">
+    <%= f.label :os_type %><br />
+    <%= f.text_field :os_type %>
+  </div>
+  <div class="field">
+    <%= f.label :launched_on %><br />
+    <%= f.text_area :launched_on %>
+  </div>
+  <div class="field">
+    <%= f.label :instance_type_id %><br />
+    <%= f.number_field :instance_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :vm_mode %><br />
+    <%= f.text_field :vm_mode %>
+  </div>
+  <div class="field">
+    <%= f.label :uuid %><br />
+    <%= f.text_field :uuid %>
+  </div>
+  <div class="field">
+    <%= f.label :architecture %><br />
+    <%= f.text_field :architecture %>
+  </div>
+  <div class="field">
+    <%= f.label :root_device_name %><br />
+    <%= f.text_field :root_device_name %>
+  </div>
+  <div class="field">
+    <%= f.label :access_ip_v4 %><br />
+    <%= f.text_field :access_ip_v4 %>
+  </div>
+  <div class="field">
+    <%= f.label :access_ip_v6 %><br />
+    <%= f.text_field :access_ip_v6 %>
+  </div>
+  <div class="field">
+    <%= f.label :config_drive %><br />
+    <%= f.text_field :config_drive %>
+  </div>
+  <div class="field">
+    <%= f.label :task_state %><br />
+    <%= f.text_field :task_state %>
+  </div>
+  <div class="field">
+    <%= f.label :default_ephemeral_device %><br />
+    <%= f.text_field :default_ephemeral_device %>
+  </div>
+  <div class="field">
+    <%= f.label :default_swap_device %><br />
+    <%= f.text_field :default_swap_device %>
+  </div>
+  <div class="field">
+    <%= f.label :progress %><br />
+    <%= f.number_field :progress %>
+  </div>
+  <div class="field">
+    <%= f.label :auto_disk_config %><br />
+    <%= f.check_box :auto_disk_config %>
+  </div>
+  <div class="field">
+    <%= f.label :shutdown_terminate %><br />
+    <%= f.check_box :shutdown_terminate %>
+  </div>
+  <div class="field">
+    <%= f.label :disable_terminate %><br />
+    <%= f.check_box :disable_terminate %>
+  </div>
+  <div class="field">
+    <%= f.label :root_gb %><br />
+    <%= f.number_field :root_gb %>
+  </div>
+  <div class="field">
+    <%= f.label :ephemeral_gb %><br />
+    <%= f.number_field :ephemeral_gb %>
+  </div>
+  <div class="field">
+    <%= f.label :cell_name %><br />
+    <%= f.text_field :cell_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

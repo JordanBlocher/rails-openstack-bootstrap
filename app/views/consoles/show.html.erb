@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @console.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @console.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @console.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @console.deleted %>
+</p>
+
+<p>
+  <b>Instance name:</b>
+  <%= @console.instance_name %>
+</p>
+
+<p>
+  <b>Instance:</b>
+  <%= @console.instance_id %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @console.password %>
+</p>
+
+<p>
+  <b>Port:</b>
+  <%= @console.port %>
+</p>
+
+<p>
+  <b>Pool:</b>
+  <%= @console.pool_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_console_path(@console) %> |
+<%= link_to 'Back', consoles_path %>

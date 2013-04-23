@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @aggregate_metadatum.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @aggregate_metadatum.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @aggregate_metadatum.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @aggregate_metadatum.deleted %>
+</p>
+
+<p>
+  <b>Aggregate:</b>
+  <%= @aggregate_metadatum.aggregate_id %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%= @aggregate_metadatum.key %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @aggregate_metadatum.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_aggregate_metadatum_path(@aggregate_metadatum) %> |
+<%= link_to 'Back', aggregate_metadata_path %>

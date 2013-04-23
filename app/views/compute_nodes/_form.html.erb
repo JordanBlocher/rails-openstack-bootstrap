@@ -1,0 +1,97 @@
+<%= form_for(@compute_node) do |f| %>
+  <% if @compute_node.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@compute_node.errors.count, "error") %> prohibited this compute_node from being saved:</h2>
+
+      <ul>
+      <% @compute_node.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :service_id %><br />
+    <%= f.number_field :service_id %>
+  </div>
+  <div class="field">
+    <%= f.label :vcpus %><br />
+    <%= f.number_field :vcpus %>
+  </div>
+  <div class="field">
+    <%= f.label :memory_mb %><br />
+    <%= f.number_field :memory_mb %>
+  </div>
+  <div class="field">
+    <%= f.label :local_gb %><br />
+    <%= f.number_field :local_gb %>
+  </div>
+  <div class="field">
+    <%= f.label :vcpus_used %><br />
+    <%= f.number_field :vcpus_used %>
+  </div>
+  <div class="field">
+    <%= f.label :memory_mb_used %><br />
+    <%= f.number_field :memory_mb_used %>
+  </div>
+  <div class="field">
+    <%= f.label :local_gb_used %><br />
+    <%= f.number_field :local_gb_used %>
+  </div>
+  <div class="field">
+    <%= f.label :hypervisor_type %><br />
+    <%= f.text_area :hypervisor_type %>
+  </div>
+  <div class="field">
+    <%= f.label :hypervisor_version %><br />
+    <%= f.number_field :hypervisor_version %>
+  </div>
+  <div class="field">
+    <%= f.label :cpu_info %><br />
+    <%= f.text_area :cpu_info %>
+  </div>
+  <div class="field">
+    <%= f.label :disk_available_least %><br />
+    <%= f.number_field :disk_available_least %>
+  </div>
+  <div class="field">
+    <%= f.label :free_ram_mb %><br />
+    <%= f.number_field :free_ram_mb %>
+  </div>
+  <div class="field">
+    <%= f.label :free_disk_gb %><br />
+    <%= f.number_field :free_disk_gb %>
+  </div>
+  <div class="field">
+    <%= f.label :current_workload %><br />
+    <%= f.number_field :current_workload %>
+  </div>
+  <div class="field">
+    <%= f.label :running_vms %><br />
+    <%= f.number_field :running_vms %>
+  </div>
+  <div class="field">
+    <%= f.label :hypervisor_hostname %><br />
+    <%= f.text_field :hypervisor_hostname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

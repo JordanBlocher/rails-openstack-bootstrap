@@ -1,0 +1,129 @@
+<%= form_for(@network) do |f| %>
+  <% if @network.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@network.errors.count, "error") %> prohibited this network from being saved:</h2>
+
+      <ul>
+      <% @network.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :injected %><br />
+    <%= f.check_box :injected %>
+  </div>
+  <div class="field">
+    <%= f.label :cidr %><br />
+    <%= f.text_field :cidr %>
+  </div>
+  <div class="field">
+    <%= f.label :netmask %><br />
+    <%= f.text_field :netmask %>
+  </div>
+  <div class="field">
+    <%= f.label :bridge %><br />
+    <%= f.text_field :bridge %>
+  </div>
+  <div class="field">
+    <%= f.label :gateway %><br />
+    <%= f.text_field :gateway %>
+  </div>
+  <div class="field">
+    <%= f.label :broadcast %><br />
+    <%= f.text_field :broadcast %>
+  </div>
+  <div class="field">
+    <%= f.label :dns1 %><br />
+    <%= f.text_field :dns1 %>
+  </div>
+  <div class="field">
+    <%= f.label :vlan %><br />
+    <%= f.number_field :vlan %>
+  </div>
+  <div class="field">
+    <%= f.label :vpn_public_address %><br />
+    <%= f.text_field :vpn_public_address %>
+  </div>
+  <div class="field">
+    <%= f.label :vpn_public_port %><br />
+    <%= f.number_field :vpn_public_port %>
+  </div>
+  <div class="field">
+    <%= f.label :vpn_private_address %><br />
+    <%= f.text_field :vpn_private_address %>
+  </div>
+  <div class="field">
+    <%= f.label :dhcp_start %><br />
+    <%= f.text_field :dhcp_start %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
+    <%= f.label :cidr_v6 %><br />
+    <%= f.text_field :cidr_v6 %>
+  </div>
+  <div class="field">
+    <%= f.label :gateway_v6 %><br />
+    <%= f.text_field :gateway_v6 %>
+  </div>
+  <div class="field">
+    <%= f.label :label %><br />
+    <%= f.text_field :label %>
+  </div>
+  <div class="field">
+    <%= f.label :netmask_v6 %><br />
+    <%= f.text_field :netmask_v6 %>
+  </div>
+  <div class="field">
+    <%= f.label :bridge_interface %><br />
+    <%= f.text_field :bridge_interface %>
+  </div>
+  <div class="field">
+    <%= f.label :multi_host %><br />
+    <%= f.check_box :multi_host %>
+  </div>
+  <div class="field">
+    <%= f.label :dns2 %><br />
+    <%= f.text_field :dns2 %>
+  </div>
+  <div class="field">
+    <%= f.label :uuid %><br />
+    <%= f.text_field :uuid %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.number_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :rxtx_base %><br />
+    <%= f.number_field :rxtx_base %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

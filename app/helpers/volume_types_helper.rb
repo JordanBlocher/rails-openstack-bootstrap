@@ -1,0 +1,2 @@
+module VolumeTypesHelper
+end

@@ -1,0 +1,61 @@
+<%= form_for(@floating_ip) do |f| %>
+  <% if @floating_ip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@floating_ip.errors.count, "error") %> prohibited this floating_ip from being saved:</h2>
+
+      <ul>
+      <% @floating_ip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :fixed_ip_id %><br />
+    <%= f.number_field :fixed_ip_id %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
+    <%= f.label :auto_assigned %><br />
+    <%= f.check_box :auto_assigned %>
+  </div>
+  <div class="field">
+    <%= f.label :pool %><br />
+    <%= f.text_field :pool %>
+  </div>
+  <div class="field">
+    <%= f.label :interface %><br />
+    <%= f.text_field :interface %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

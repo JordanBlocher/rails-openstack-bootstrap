@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image:</b>
+  <%= @image_property.image_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @image_property.name %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @image_property.value %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @image_property.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @image_property.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @image_property.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @image_property.deleted %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_property_path(@image_property) %> |
+<%= link_to 'Back', image_properties_path %>

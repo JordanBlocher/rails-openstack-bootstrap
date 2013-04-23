@@ -1,0 +1,145 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @network.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @network.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @network.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @network.deleted %>
+</p>
+
+<p>
+  <b>Injected:</b>
+  <%= @network.injected %>
+</p>
+
+<p>
+  <b>Cidr:</b>
+  <%= @network.cidr %>
+</p>
+
+<p>
+  <b>Netmask:</b>
+  <%= @network.netmask %>
+</p>
+
+<p>
+  <b>Bridge:</b>
+  <%= @network.bridge %>
+</p>
+
+<p>
+  <b>Gateway:</b>
+  <%= @network.gateway %>
+</p>
+
+<p>
+  <b>Broadcast:</b>
+  <%= @network.broadcast %>
+</p>
+
+<p>
+  <b>Dns1:</b>
+  <%= @network.dns1 %>
+</p>
+
+<p>
+  <b>Vlan:</b>
+  <%= @network.vlan %>
+</p>
+
+<p>
+  <b>Vpn public address:</b>
+  <%= @network.vpn_public_address %>
+</p>
+
+<p>
+  <b>Vpn public port:</b>
+  <%= @network.vpn_public_port %>
+</p>
+
+<p>
+  <b>Vpn private address:</b>
+  <%= @network.vpn_private_address %>
+</p>
+
+<p>
+  <b>Dhcp start:</b>
+  <%= @network.dhcp_start %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @network.project_id %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @network.host %>
+</p>
+
+<p>
+  <b>Cidr v6:</b>
+  <%= @network.cidr_v6 %>
+</p>
+
+<p>
+  <b>Gateway v6:</b>
+  <%= @network.gateway_v6 %>
+</p>
+
+<p>
+  <b>Label:</b>
+  <%= @network.label %>
+</p>
+
+<p>
+  <b>Netmask v6:</b>
+  <%= @network.netmask_v6 %>
+</p>
+
+<p>
+  <b>Bridge interface:</b>
+  <%= @network.bridge_interface %>
+</p>
+
+<p>
+  <b>Multi host:</b>
+  <%= @network.multi_host %>
+</p>
+
+<p>
+  <b>Dns2:</b>
+  <%= @network.dns2 %>
+</p>
+
+<p>
+  <b>Uuid:</b>
+  <%= @network.uuid %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @network.priority %>
+</p>
+
+<p>
+  <b>Rxtx base:</b>
+  <%= @network.rxtx_base %>
+</p>
+
+
+<%= link_to 'Edit', edit_network_path(@network) %> |
+<%= link_to 'Back', networks_path %>

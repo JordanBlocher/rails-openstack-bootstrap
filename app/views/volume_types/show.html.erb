@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @volume_type.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @volume_type.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @volume_type.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @volume_type.deleted %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @volume_type.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_volume_type_path(@volume_type) %> |
+<%= link_to 'Back', volume_types_path %>

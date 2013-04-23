@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Token hash:</b>
+  <%= @auth_token.token_hash %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @auth_token.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @auth_token.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @auth_token.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @auth_token.deleted %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @auth_token.user_id %>
+</p>
+
+<p>
+  <b>Server management url:</b>
+  <%= @auth_token.server_management_url %>
+</p>
+
+<p>
+  <b>Storage url:</b>
+  <%= @auth_token.storage_url %>
+</p>
+
+<p>
+  <b>Cdn management url:</b>
+  <%= @auth_token.cdn_management_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_auth_token_path(@auth_token) %> |
+<%= link_to 'Back', auth_tokens_path %>

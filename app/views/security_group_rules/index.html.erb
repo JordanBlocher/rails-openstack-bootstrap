@@ -1,0 +1,41 @@
+<h1>Listing security_group_rules</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Parent group</th>
+    <th>Protocol</th>
+    <th>From port</th>
+    <th>To port</th>
+    <th>Cidr</th>
+    <th>Group</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @security_group_rules.each do |security_group_rule| %>
+  <tr>
+    <td><%= security_group_rule.created_at %></td>
+    <td><%= security_group_rule.updated_at %></td>
+    <td><%= security_group_rule.deleted_at %></td>
+    <td><%= security_group_rule.deleted %></td>
+    <td><%= security_group_rule.parent_group_id %></td>
+    <td><%= security_group_rule.protocol %></td>
+    <td><%= security_group_rule.from_port %></td>
+    <td><%= security_group_rule.to_port %></td>
+    <td><%= security_group_rule.cidr %></td>
+    <td><%= security_group_rule.group_id %></td>
+    <td><%= link_to 'Show', security_group_rule %></td>
+    <td><%= link_to 'Edit', edit_security_group_rule_path(security_group_rule) %></td>
+    <td><%= link_to 'Destroy', security_group_rule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Security group rule', new_security_group_rule_path %>

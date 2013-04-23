@@ -1,0 +1,2 @@
+module AggregateMetadataHelper
+end

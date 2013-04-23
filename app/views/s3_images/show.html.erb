@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @s3_image.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @s3_image.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @s3_image.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @s3_image.deleted %>
+</p>
+
+<p>
+  <b>Uuid:</b>
+  <%= @s3_image.uuid %>
+</p>
+
+
+<%= link_to 'Edit', edit_s3_image_path(@s3_image) %> |
+<%= link_to 'Back', s3_images_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @provider_fw_rule.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @provider_fw_rule.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @provider_fw_rule.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @provider_fw_rule.deleted %>
+</p>
+
+<p>
+  <b>Protocol:</b>
+  <%= @provider_fw_rule.protocol %>
+</p>
+
+<p>
+  <b>From port:</b>
+  <%= @provider_fw_rule.from_port %>
+</p>
+
+<p>
+  <b>To port:</b>
+  <%= @provider_fw_rule.to_port %>
+</p>
+
+<p>
+  <b>Cidr:</b>
+  <%= @provider_fw_rule.cidr %>
+</p>
+
+
+<%= link_to 'Edit', edit_provider_fw_rule_path(@provider_fw_rule) %> |
+<%= link_to 'Back', provider_fw_rules_path %>

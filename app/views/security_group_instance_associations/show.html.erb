@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @security_group_instance_association.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @security_group_instance_association.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @security_group_instance_association.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @security_group_instance_association.deleted %>
+</p>
+
+<p>
+  <b>Security group:</b>
+  <%= @security_group_instance_association.security_group_id %>
+</p>
+
+<p>
+  <b>Instance:</b>
+  <%= @security_group_instance_association.instance_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_security_group_instance_association_path(@security_group_instance_association) %> |
+<%= link_to 'Back', security_group_instance_associations_path %>

@@ -1,0 +1,77 @@
+<h1>Listing networks</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Injected</th>
+    <th>Cidr</th>
+    <th>Netmask</th>
+    <th>Bridge</th>
+    <th>Gateway</th>
+    <th>Broadcast</th>
+    <th>Dns1</th>
+    <th>Vlan</th>
+    <th>Vpn public address</th>
+    <th>Vpn public port</th>
+    <th>Vpn private address</th>
+    <th>Dhcp start</th>
+    <th>Project</th>
+    <th>Host</th>
+    <th>Cidr v6</th>
+    <th>Gateway v6</th>
+    <th>Label</th>
+    <th>Netmask v6</th>
+    <th>Bridge interface</th>
+    <th>Multi host</th>
+    <th>Dns2</th>
+    <th>Uuid</th>
+    <th>Priority</th>
+    <th>Rxtx base</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @networks.each do |network| %>
+  <tr>
+    <td><%= network.created_at %></td>
+    <td><%= network.updated_at %></td>
+    <td><%= network.deleted_at %></td>
+    <td><%= network.deleted %></td>
+    <td><%= network.injected %></td>
+    <td><%= network.cidr %></td>
+    <td><%= network.netmask %></td>
+    <td><%= network.bridge %></td>
+    <td><%= network.gateway %></td>
+    <td><%= network.broadcast %></td>
+    <td><%= network.dns1 %></td>
+    <td><%= network.vlan %></td>
+    <td><%= network.vpn_public_address %></td>
+    <td><%= network.vpn_public_port %></td>
+    <td><%= network.vpn_private_address %></td>
+    <td><%= network.dhcp_start %></td>
+    <td><%= network.project_id %></td>
+    <td><%= network.host %></td>
+    <td><%= network.cidr_v6 %></td>
+    <td><%= network.gateway_v6 %></td>
+    <td><%= network.label %></td>
+    <td><%= network.netmask_v6 %></td>
+    <td><%= network.bridge_interface %></td>
+    <td><%= network.multi_host %></td>
+    <td><%= network.dns2 %></td>
+    <td><%= network.uuid %></td>
+    <td><%= network.priority %></td>
+    <td><%= network.rxtx_base %></td>
+    <td><%= link_to 'Show', network %></td>
+    <td><%= link_to 'Edit', edit_network_path(network) %></td>
+    <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Network', new_network_path %>

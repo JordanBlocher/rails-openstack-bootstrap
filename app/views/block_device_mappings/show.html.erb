@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @block_device_mapping.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @block_device_mapping.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @block_device_mapping.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @block_device_mapping.deleted %>
+</p>
+
+<p>
+  <b>Instance:</b>
+  <%= @block_device_mapping.instance_id %>
+</p>
+
+<p>
+  <b>Device name:</b>
+  <%= @block_device_mapping.device_name %>
+</p>
+
+<p>
+  <b>Delete on termination:</b>
+  <%= @block_device_mapping.delete_on_termination %>
+</p>
+
+<p>
+  <b>Virtual name:</b>
+  <%= @block_device_mapping.virtual_name %>
+</p>
+
+<p>
+  <b>Snapshot:</b>
+  <%= @block_device_mapping.snapshot_id %>
+</p>
+
+<p>
+  <b>Volume:</b>
+  <%= @block_device_mapping.volume_id %>
+</p>
+
+<p>
+  <b>Volume size:</b>
+  <%= @block_device_mapping.volume_size %>
+</p>
+
+<p>
+  <b>No device:</b>
+  <%= @block_device_mapping.no_device %>
+</p>
+
+<p>
+  <b>Connection info:</b>
+  <%= @block_device_mapping.connection_info %>
+</p>
+
+
+<%= link_to 'Edit', edit_block_device_mapping_path(@block_device_mapping) %> |
+<%= link_to 'Back', block_device_mappings_path %>

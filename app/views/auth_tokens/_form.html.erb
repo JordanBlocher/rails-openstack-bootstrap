@@ -1,0 +1,53 @@
+<%= form_for(@auth_token) do |f| %>
+  <% if @auth_token.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auth_token.errors.count, "error") %> prohibited this auth_token from being saved:</h2>
+
+      <ul>
+      <% @auth_token.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :token_hash %><br />
+    <%= f.text_field :token_hash %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :server_management_url %><br />
+    <%= f.text_field :server_management_url %>
+  </div>
+  <div class="field">
+    <%= f.label :storage_url %><br />
+    <%= f.text_field :storage_url %>
+  </div>
+  <div class="field">
+    <%= f.label :cdn_management_url %><br />
+    <%= f.text_field :cdn_management_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

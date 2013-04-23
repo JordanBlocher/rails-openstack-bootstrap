@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @snapshot.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @snapshot.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @snapshot.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @snapshot.deleted %>
+</p>
+
+<p>
+  <b>Volume:</b>
+  <%= @snapshot.volume_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @snapshot.user_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @snapshot.project_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @snapshot.status %>
+</p>
+
+<p>
+  <b>Progress:</b>
+  <%= @snapshot.progress %>
+</p>
+
+<p>
+  <b>Volume size:</b>
+  <%= @snapshot.volume_size %>
+</p>
+
+<p>
+  <b>Scheduled at:</b>
+  <%= @snapshot.scheduled_at %>
+</p>
+
+<p>
+  <b>Display name:</b>
+  <%= @snapshot.display_name %>
+</p>
+
+<p>
+  <b>Display description:</b>
+  <%= @snapshot.display_description %>
+</p>
+
+
+<%= link_to 'Edit', edit_snapshot_path(@snapshot) %> |
+<%= link_to 'Back', snapshots_path %>

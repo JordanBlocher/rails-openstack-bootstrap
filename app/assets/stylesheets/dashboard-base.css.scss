@@ -1,0 +1,158 @@
+
+    /* CUSTOM DASHBOARD
+    -------------------------------------------------- */
+
+    .dashboard {
+      margin-bottom: 40px;
+      margin-top: 30px;
+    }
+
+    .dashboard .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .dashboard-control {
+      height: 70px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .dashboard .item {
+      height: 150px;
+    }
+    .dashboard img {
+      position: absolute;
+      top: 0;
+      min-width: 100%;
+      height: 150px;
+      margin-top: 0px;
+    }
+    
+    .dashboard-caption h1,
+    .dashboard-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 5px 5px rgba(0,0,0,.4);
+    }
+    .dashboard-caption .btn {
+      margin-top: 0px;
+    }
+
+    .dashboard-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 0px;
+      margin-top: -30px;
+    }
+    
+
+
+    /* LOCK CSS
+    -------------------------------------------------- */
+     .lock img {
+      position: relative;
+      top: 0;
+      min-width: 10%;
+      height: 50px;
+      margin-top: 10px;
+    }
+    
+
+    /* TABLE CSS
+    -------------------------------------------------- */
+      .table, th, td{
+    }
+        
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .dashboard .item {
+        height: 150px;
+      }
+      .dashboard img {
+        width: 100%;
+        height: 150px;
+      }
+      .lock img {
+        width: auto;
+        height: 50px;
+      }
+
+
+    }
+
+
+    @media (max-width: 767px) {
+
+      .dashboard {
+      }
+      .dashboard .container {
+
+      }
+      .dashboard .item {
+        height: 70px;
+      }
+      .dashboard img {
+        height: 70px;
+      }
+      .dashboard-caption {
+        width: 65%;
+        padding: 0 0px;
+        margin-top: 0px;
+      }
+      .dashboard-caption h1 {
+        font-size: 30px;
+      }
+      .dashboard-caption .lead,
+      .dashboard-caption .btn {
+        font-size: 18px;
+      }
+      .lock img {
+        width: auto;
+        height: 50px;
+      }
+
+
+    }
+
+
+    /* FORM CSS
+    -------------------------------------------------- */
+      
+      .form {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form .form-heading,
+      .form .checkbox {
+        margin-bottom: 10px;
+      }
+      .form input[type="text"],
+      .form input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+

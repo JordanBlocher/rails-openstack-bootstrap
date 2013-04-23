@@ -1,0 +1,35 @@
+<h1>Listing volume_metadata</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Volume</th>
+    <th>Key</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @volume_metadata.each do |volume_metadatum| %>
+  <tr>
+    <td><%= volume_metadatum.created_at %></td>
+    <td><%= volume_metadatum.updated_at %></td>
+    <td><%= volume_metadatum.deleted_at %></td>
+    <td><%= volume_metadatum.deleted %></td>
+    <td><%= volume_metadatum.volume_id %></td>
+    <td><%= volume_metadatum.key %></td>
+    <td><%= volume_metadatum.value %></td>
+    <td><%= link_to 'Show', volume_metadatum %></td>
+    <td><%= link_to 'Edit', edit_volume_metadatum_path(volume_metadatum) %></td>
+    <td><%= link_to 'Destroy', volume_metadatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Volume metadatum', new_volume_metadatum_path %>

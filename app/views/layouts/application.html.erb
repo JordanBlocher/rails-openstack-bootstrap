@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cloud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+                                   
+<%= render 'layouts/shim' %>   
+<%= render 'layouts/rel' %>   
+
+<%= yield :head %>
+ </head>
+
+  <!-- START_HIGHLIGHT -->
+<body class='<%= controller.controller_name %>'>
+<!-- END_HIGHLIGHT -->           
+
+ <%= render 'layouts/navbar' %>    
+<br/><br/><br/><br/>
+
+<%= yield %>
+
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+ 
+ <%= render 'layouts/footer' %>
+
+
+</body>
+</html>

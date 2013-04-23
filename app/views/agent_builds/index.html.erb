@@ -1,0 +1,41 @@
+<h1>Listing agent_builds</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Hypervisor</th>
+    <th>Os</th>
+    <th>Architecture</th>
+    <th>Version</th>
+    <th>Url</th>
+    <th>Md5hash</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @agent_builds.each do |agent_build| %>
+  <tr>
+    <td><%= agent_build.created_at %></td>
+    <td><%= agent_build.updated_at %></td>
+    <td><%= agent_build.deleted_at %></td>
+    <td><%= agent_build.deleted %></td>
+    <td><%= agent_build.hypervisor %></td>
+    <td><%= agent_build.os %></td>
+    <td><%= agent_build.architecture %></td>
+    <td><%= agent_build.version %></td>
+    <td><%= agent_build.url %></td>
+    <td><%= agent_build.md5hash %></td>
+    <td><%= link_to 'Show', agent_build %></td>
+    <td><%= link_to 'Edit', edit_agent_build_path(agent_build) %></td>
+    <td><%= link_to 'Destroy', agent_build, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Agent build', new_agent_build_path %>

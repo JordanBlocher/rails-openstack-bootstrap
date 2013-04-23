@@ -1,0 +1,57 @@
+<%= form_for(@service) do |f| %>
+  <% if @service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+      <ul>
+      <% @service.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
+    <%= f.label :binary %><br />
+    <%= f.text_field :binary %>
+  </div>
+  <div class="field">
+    <%= f.label :topic %><br />
+    <%= f.text_field :topic %>
+  </div>
+  <div class="field">
+    <%= f.label :report_count %><br />
+    <%= f.number_field :report_count %>
+  </div>
+  <div class="field">
+    <%= f.label :disabled %><br />
+    <%= f.check_box :disabled %>
+  </div>
+  <div class="field">
+    <%= f.label :availability_zone %><br />
+    <%= f.text_field :availability_zone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

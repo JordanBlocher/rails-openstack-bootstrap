@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  created_at: 2013-04-21 12:30:03
+  updated_at: 2013-04-21 12:30:03
+  deleted_at: 2013-04-21 12:30:03
+  deleted: false
+  start_period: 2013-04-21 12:30:03
+  last_refreshed: 2013-04-21 12:30:03
+  bw_in: 1
+  bw_out: 1
+  mac: MyString
+
+two:
+  created_at: 2013-04-21 12:30:03
+  updated_at: 2013-04-21 12:30:03
+  deleted_at: 2013-04-21 12:30:03
+  deleted: false
+  start_period: 2013-04-21 12:30:03
+  last_refreshed: 2013-04-21 12:30:03
+  bw_in: 1
+  bw_out: 1
+  mac: MyString

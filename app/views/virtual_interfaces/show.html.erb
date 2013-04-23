@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @virtual_interface.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @virtual_interface.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @virtual_interface.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @virtual_interface.deleted %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @virtual_interface.address %>
+</p>
+
+<p>
+  <b>Network:</b>
+  <%= @virtual_interface.network_id %>
+</p>
+
+<p>
+  <b>Instance:</b>
+  <%= @virtual_interface.instance_id %>
+</p>
+
+<p>
+  <b>Uuid:</b>
+  <%= @virtual_interface.uuid %>
+</p>
+
+
+<%= link_to 'Edit', edit_virtual_interface_path(@virtual_interface) %> |
+<%= link_to 'Back', virtual_interfaces_path %>

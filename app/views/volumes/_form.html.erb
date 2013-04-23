@@ -1,0 +1,113 @@
+<%= form_for(@volume) do |f| %>
+  <% if @volume.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@volume.errors.count, "error") %> prohibited this volume from being saved:</h2>
+
+      <ul>
+      <% @volume.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :ec2_id %><br />
+    <%= f.text_field :ec2_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.number_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :availability_zone %><br />
+    <%= f.text_field :availability_zone %>
+  </div>
+  <div class="field">
+    <%= f.label :instance_id %><br />
+    <%= f.number_field :instance_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mountpoint %><br />
+    <%= f.text_field :mountpoint %>
+  </div>
+  <div class="field">
+    <%= f.label :attach_time %><br />
+    <%= f.text_field :attach_time %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :attach_status %><br />
+    <%= f.text_field :attach_status %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled_at %><br />
+    <%= f.datetime_select :scheduled_at %>
+  </div>
+  <div class="field">
+    <%= f.label :launched_at %><br />
+    <%= f.datetime_select :launched_at %>
+  </div>
+  <div class="field">
+    <%= f.label :terminated_at %><br />
+    <%= f.datetime_select :terminated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :display_name %><br />
+    <%= f.text_field :display_name %>
+  </div>
+  <div class="field">
+    <%= f.label :display_description %><br />
+    <%= f.text_field :display_description %>
+  </div>
+  <div class="field">
+    <%= f.label :provider_location %><br />
+    <%= f.text_field :provider_location %>
+  </div>
+  <div class="field">
+    <%= f.label :provider_auth %><br />
+    <%= f.text_field :provider_auth %>
+  </div>
+  <div class="field">
+    <%= f.label :snapshot_id %><br />
+    <%= f.number_field :snapshot_id %>
+  </div>
+  <div class="field">
+    <%= f.label :volume_type_id %><br />
+    <%= f.number_field :volume_type_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

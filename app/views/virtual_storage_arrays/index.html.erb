@@ -1,0 +1,47 @@
+<h1>Listing virtual_storage_arrays</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Display name</th>
+    <th>Display description</th>
+    <th>Project</th>
+    <th>Availability zone</th>
+    <th>Instance type</th>
+    <th>Image ref</th>
+    <th>Vc count</th>
+    <th>Vol count</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @virtual_storage_arrays.each do |virtual_storage_array| %>
+  <tr>
+    <td><%= virtual_storage_array.created_at %></td>
+    <td><%= virtual_storage_array.updated_at %></td>
+    <td><%= virtual_storage_array.deleted_at %></td>
+    <td><%= virtual_storage_array.deleted %></td>
+    <td><%= virtual_storage_array.display_name %></td>
+    <td><%= virtual_storage_array.display_description %></td>
+    <td><%= virtual_storage_array.project_id %></td>
+    <td><%= virtual_storage_array.availability_zone %></td>
+    <td><%= virtual_storage_array.instance_type_id %></td>
+    <td><%= virtual_storage_array.image_ref %></td>
+    <td><%= virtual_storage_array.vc_count %></td>
+    <td><%= virtual_storage_array.vol_count %></td>
+    <td><%= virtual_storage_array.status %></td>
+    <td><%= link_to 'Show', virtual_storage_array %></td>
+    <td><%= link_to 'Edit', edit_virtual_storage_array_path(virtual_storage_array) %></td>
+    <td><%= link_to 'Destroy', virtual_storage_array, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Virtual storage array', new_virtual_storage_array_path %>

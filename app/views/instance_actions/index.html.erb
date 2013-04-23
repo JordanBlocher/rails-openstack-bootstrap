@@ -1,0 +1,35 @@
+<h1>Listing instance_actions</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Action</th>
+    <th>Error</th>
+    <th>Instance uuid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instance_actions.each do |instance_action| %>
+  <tr>
+    <td><%= instance_action.created_at %></td>
+    <td><%= instance_action.updated_at %></td>
+    <td><%= instance_action.deleted_at %></td>
+    <td><%= instance_action.deleted %></td>
+    <td><%= instance_action.action %></td>
+    <td><%= instance_action.error %></td>
+    <td><%= instance_action.instance_uuid %></td>
+    <td><%= link_to 'Show', instance_action %></td>
+    <td><%= link_to 'Edit', edit_instance_action_path(instance_action) %></td>
+    <td><%= link_to 'Destroy', instance_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instance action', new_instance_action_path %>

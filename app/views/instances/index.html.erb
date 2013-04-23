@@ -1,0 +1,75 @@
+<% content_for :head do %>
+<%= stylesheet_link_tag 'dashboard-base.css.scss' -%>
+<% end %>
+
+
+<%= content_tag :div, :class => "dashboard" do -%>
+
+    <%= image_tag("keys.jpg", :alt=>"")%>
+        <%= content_tag :div, :class => "container" do -%>
+        <%= content_tag :div, :class => "dashboard-caption" do -%>
+        <h1> Instances </h1>
+        <% end %>
+        <% end %>
+    <% end %>
+
+
+<%= content_tag :div, :class => "container-fluid" do -%>
+<%= content_tag :div, :class => "row-fluid" do -%>
+
+<%= content_tag :div, :class => "span2" do -%>
+
+<%= button_to "Networks", networks_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Projects", projects_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Images", image_members_path, :method => "get", :class => "btn btn-primary"%>
+
+<% end %>
+
+<%= content_tag :div, :class => "span10" do -%>
+<table class="table table-bordered">
+  <tr>
+    <th>User</th>
+    <th>Project</th>
+    <th>Key name</th>
+    <th>Power state</th>
+    <th>Vm state</th>
+    <th>Memory mb</th>
+    <th>Vcpus</th>
+    <th>Hostname</th>
+    <th>Host</th>
+    <th>Reservation</th>
+    <th>Display name</th>
+    <th>Uuid</th>
+    <th>Root device name</th>
+    <th></th>
+  </tr>
+
+<% @instances.each do |instance| %>
+  <tr>
+    <td><%= instance.user_id %></td>
+    <td><%= instance.project_id %></td>
+    <td><%= instance.key_name %></td>
+    <td><%= instance.power_state %></td>
+    <td><%= instance.vm_state %></td>
+    <td><%= instance.memory_mb %></td>
+    <td><%= instance.vcpus %></td>
+    <td><%= instance.hostname %></td>
+    <td><%= instance.host %></td>
+    <td><%= instance.reservation_id %></td>
+    <td><%= instance.display_name %></td>
+    <td><%= instance.uuid %></td>
+    <td><%= instance.root_device_name %></td>
+    <td><%= link_to 'Show', instance %>
+    <%= link_to 'Edit', edit_instance_path(instance) %>
+    <%= link_to 'Destroy', instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instance', new_instance_path %>
+
+<% end %>
+<% end %>
+<% end %>

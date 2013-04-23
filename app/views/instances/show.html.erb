@@ -1,0 +1,250 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @instance.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @instance.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @instance.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @instance.deleted %>
+</p>
+
+<p>
+  <b>Internal:</b>
+  <%= @instance.internal_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @instance.user_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @instance.project_id %>
+</p>
+
+<p>
+  <b>Image ref:</b>
+  <%= @instance.image_ref %>
+</p>
+
+<p>
+  <b>Kernel:</b>
+  <%= @instance.kernel_id %>
+</p>
+
+<p>
+  <b>Ramdisk:</b>
+  <%= @instance.ramdisk_id %>
+</p>
+
+<p>
+  <b>Server name:</b>
+  <%= @instance.server_name %>
+</p>
+
+<p>
+  <b>Launch index:</b>
+  <%= @instance.launch_index %>
+</p>
+
+<p>
+  <b>Key name:</b>
+  <%= @instance.key_name %>
+</p>
+
+<p>
+  <b>Key data:</b>
+  <%= @instance.key_data %>
+</p>
+
+<p>
+  <b>Power state:</b>
+  <%= @instance.power_state %>
+</p>
+
+<p>
+  <b>Vm state:</b>
+  <%= @instance.vm_state %>
+</p>
+
+<p>
+  <b>Memory mb:</b>
+  <%= @instance.memory_mb %>
+</p>
+
+<p>
+  <b>Vcpus:</b>
+  <%= @instance.vcpus %>
+</p>
+
+<p>
+  <b>Hostname:</b>
+  <%= @instance.hostname %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @instance.host %>
+</p>
+
+<p>
+  <b>User data:</b>
+  <%= @instance.user_data %>
+</p>
+
+<p>
+  <b>Reservation:</b>
+  <%= @instance.reservation_id %>
+</p>
+
+<p>
+  <b>Scheduled at:</b>
+  <%= @instance.scheduled_at %>
+</p>
+
+<p>
+  <b>Launched at:</b>
+  <%= @instance.launched_at %>
+</p>
+
+<p>
+  <b>Terminated at:</b>
+  <%= @instance.terminated_at %>
+</p>
+
+<p>
+  <b>Display name:</b>
+  <%= @instance.display_name %>
+</p>
+
+<p>
+  <b>Display description:</b>
+  <%= @instance.display_description %>
+</p>
+
+<p>
+  <b>Availability zone:</b>
+  <%= @instance.availability_zone %>
+</p>
+
+<p>
+  <b>Locked:</b>
+  <%= @instance.locked %>
+</p>
+
+<p>
+  <b>Os type:</b>
+  <%= @instance.os_type %>
+</p>
+
+<p>
+  <b>Launched on:</b>
+  <%= @instance.launched_on %>
+</p>
+
+<p>
+  <b>Instance type:</b>
+  <%= @instance.instance_type_id %>
+</p>
+
+<p>
+  <b>Vm mode:</b>
+  <%= @instance.vm_mode %>
+</p>
+
+<p>
+  <b>Uuid:</b>
+  <%= @instance.uuid %>
+</p>
+
+<p>
+  <b>Architecture:</b>
+  <%= @instance.architecture %>
+</p>
+
+<p>
+  <b>Root device name:</b>
+  <%= @instance.root_device_name %>
+</p>
+
+<p>
+  <b>Access ip v4:</b>
+  <%= @instance.access_ip_v4 %>
+</p>
+
+<p>
+  <b>Access ip v6:</b>
+  <%= @instance.access_ip_v6 %>
+</p>
+
+<p>
+  <b>Config drive:</b>
+  <%= @instance.config_drive %>
+</p>
+
+<p>
+  <b>Task state:</b>
+  <%= @instance.task_state %>
+</p>
+
+<p>
+  <b>Default ephemeral device:</b>
+  <%= @instance.default_ephemeral_device %>
+</p>
+
+<p>
+  <b>Default swap device:</b>
+  <%= @instance.default_swap_device %>
+</p>
+
+<p>
+  <b>Progress:</b>
+  <%= @instance.progress %>
+</p>
+
+<p>
+  <b>Auto disk config:</b>
+  <%= @instance.auto_disk_config %>
+</p>
+
+<p>
+  <b>Shutdown terminate:</b>
+  <%= @instance.shutdown_terminate %>
+</p>
+
+<p>
+  <b>Disable terminate:</b>
+  <%= @instance.disable_terminate %>
+</p>
+
+<p>
+  <b>Root gb:</b>
+  <%= @instance.root_gb %>
+</p>
+
+<p>
+  <b>Ephemeral gb:</b>
+  <%= @instance.ephemeral_gb %>
+</p>
+
+<p>
+  <b>Cell name:</b>
+  <%= @instance.cell_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_instance_path(@instance) %> |
+<%= link_to 'Back', instances_path %>

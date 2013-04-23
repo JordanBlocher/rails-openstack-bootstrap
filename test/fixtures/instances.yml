@@ -1,0 +1,103 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  created_at: 2013-04-21 13:34:31
+  updated_at: 2013-04-21 13:34:31
+  deleted_at: 2013-04-21 13:34:31
+  deleted: false
+  internal_id: 1
+  user_id: MyString
+  project_id: MyString
+  image_ref: MyString
+  kernel_id: MyString
+  ramdisk_id: MyString
+  server_name: MyString
+  launch_index: 1
+  key_name: MyString
+  key_data: MyText
+  power_state: 1
+  vm_state: MyString
+  memory_mb: 1
+  vcpus: 1
+  hostname: MyString
+  host: MyString
+  user_data: MyText
+  reservation_id: MyString
+  scheduled_at: 2013-04-21 13:34:31
+  launched_at: 2013-04-21 13:34:31
+  terminated_at: 2013-04-21 13:34:31
+  display_name: MyString
+  display_description: MyString
+  availability_zone: MyString
+  locked: false
+  os_type: MyString
+  launched_on: MyText
+  instance_type_id: 1
+  vm_mode: MyString
+  uuid: MyString
+  architecture: MyString
+  root_device_name: MyString
+  access_ip_v4: MyString
+  access_ip_v6: MyString
+  config_drive: MyString
+  task_state: MyString
+  default_ephemeral_device: MyString
+  default_swap_device: MyString
+  progress: 1
+  auto_disk_config: false
+  shutdown_terminate: false
+  disable_terminate: false
+  root_gb: 1
+  ephemeral_gb: 1
+  cell_name: MyString
+
+two:
+  created_at: 2013-04-21 13:34:31
+  updated_at: 2013-04-21 13:34:31
+  deleted_at: 2013-04-21 13:34:31
+  deleted: false
+  internal_id: 1
+  user_id: MyString
+  project_id: MyString
+  image_ref: MyString
+  kernel_id: MyString
+  ramdisk_id: MyString
+  server_name: MyString
+  launch_index: 1
+  key_name: MyString
+  key_data: MyText
+  power_state: 1
+  vm_state: MyString
+  memory_mb: 1
+  vcpus: 1
+  hostname: MyString
+  host: MyString
+  user_data: MyText
+  reservation_id: MyString
+  scheduled_at: 2013-04-21 13:34:31
+  launched_at: 2013-04-21 13:34:31
+  terminated_at: 2013-04-21 13:34:31
+  display_name: MyString
+  display_description: MyString
+  availability_zone: MyString
+  locked: false
+  os_type: MyString
+  launched_on: MyText
+  instance_type_id: 1
+  vm_mode: MyString
+  uuid: MyString
+  architecture: MyString
+  root_device_name: MyString
+  access_ip_v4: MyString
+  access_ip_v6: MyString
+  config_drive: MyString
+  task_state: MyString
+  default_ephemeral_device: MyString
+  default_swap_device: MyString
+  progress: 1
+  auto_disk_config: false
+  shutdown_terminate: false
+  disable_terminate: false
+  root_gb: 1
+  ephemeral_gb: 1
+  cell_name: MyString

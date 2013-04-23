@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @instance_info_cach.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @instance_info_cach.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @instance_info_cach.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @instance_info_cach.deleted %>
+</p>
+
+<p>
+  <b>Network info:</b>
+  <%= @instance_info_cach.network_info %>
+</p>
+
+<p>
+  <b>Instance:</b>
+  <%= @instance_info_cach.instance_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_instance_info_cach_path(@instance_info_cach) %> |
+<%= link_to 'Back', instance_info_caches_path %>

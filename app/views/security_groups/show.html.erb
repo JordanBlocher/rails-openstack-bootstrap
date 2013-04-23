@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @security_group.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @security_group.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @security_group.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @security_group.deleted %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @security_group.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @security_group.description %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @security_group.user_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @security_group.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_security_group_path(@security_group) %> |
+<%= link_to 'Back', security_groups_path %>

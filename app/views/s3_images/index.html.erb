@@ -1,0 +1,31 @@
+<h1>Listing s3_images</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Uuid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @s3_images.each do |s3_image| %>
+  <tr>
+    <td><%= s3_image.created_at %></td>
+    <td><%= s3_image.updated_at %></td>
+    <td><%= s3_image.deleted_at %></td>
+    <td><%= s3_image.deleted %></td>
+    <td><%= s3_image.uuid %></td>
+    <td><%= link_to 'Show', s3_image %></td>
+    <td><%= link_to 'Edit', edit_s3_image_path(s3_image) %></td>
+    <td><%= link_to 'Destroy', s3_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New S3 image', new_s3_image_path %>

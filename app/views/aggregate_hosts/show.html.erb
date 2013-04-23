@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @aggregate_host.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @aggregate_host.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @aggregate_host.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @aggregate_host.deleted %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @aggregate_host.host %>
+</p>
+
+<p>
+  <b>Aggregate:</b>
+  <%= @aggregate_host.aggregate_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_aggregate_host_path(@aggregate_host) %> |
+<%= link_to 'Back', aggregate_hosts_path %>

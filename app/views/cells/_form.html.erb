@@ -1,0 +1,73 @@
+<%= form_for(@cell) do |f| %>
+  <% if @cell.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cell.errors.count, "error") %> prohibited this cell from being saved:</h2>
+
+      <ul>
+      <% @cell.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :api_url %><br />
+    <%= f.text_field :api_url %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :weight_offset %><br />
+    <%= f.text_field :weight_offset %>
+  </div>
+  <div class="field">
+    <%= f.label :weight_scale %><br />
+    <%= f.text_field :weight_scale %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :is_parent %><br />
+    <%= f.check_box :is_parent %>
+  </div>
+  <div class="field">
+    <%= f.label :rpc_host %><br />
+    <%= f.text_field :rpc_host %>
+  </div>
+  <div class="field">
+    <%= f.label :rpc_port %><br />
+    <%= f.number_field :rpc_port %>
+  </div>
+  <div class="field">
+    <%= f.label :rpc_virtual_host %><br />
+    <%= f.text_field :rpc_virtual_host %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

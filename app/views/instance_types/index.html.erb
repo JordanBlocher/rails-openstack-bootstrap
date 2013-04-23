@@ -1,0 +1,47 @@
+<h1>Listing instance_types</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Name</th>
+    <th>Memory mb</th>
+    <th>Vcpus</th>
+    <th>Swap</th>
+    <th>Vcpu weight</th>
+    <th>Flavorid</th>
+    <th>Rxtx factor</th>
+    <th>Root gb</th>
+    <th>Ephemeral gb</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instance_types.each do |instance_type| %>
+  <tr>
+    <td><%= instance_type.created_at %></td>
+    <td><%= instance_type.updated_at %></td>
+    <td><%= instance_type.deleted_at %></td>
+    <td><%= instance_type.deleted %></td>
+    <td><%= instance_type.name %></td>
+    <td><%= instance_type.memory_mb %></td>
+    <td><%= instance_type.vcpus %></td>
+    <td><%= instance_type.swap %></td>
+    <td><%= instance_type.vcpu_weight %></td>
+    <td><%= instance_type.flavorid %></td>
+    <td><%= instance_type.rxtx_factor %></td>
+    <td><%= instance_type.root_gb %></td>
+    <td><%= instance_type.ephemeral_gb %></td>
+    <td><%= link_to 'Show', instance_type %></td>
+    <td><%= link_to 'Edit', edit_instance_type_path(instance_type) %></td>
+    <td><%= link_to 'Destroy', instance_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instance type', new_instance_type_path %>

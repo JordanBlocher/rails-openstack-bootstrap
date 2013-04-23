@@ -1,0 +1,37 @@
+<h1>Listing security_groups</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>User</th>
+    <th>Project</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @security_groups.each do |security_group| %>
+  <tr>
+    <td><%= security_group.created_at %></td>
+    <td><%= security_group.updated_at %></td>
+    <td><%= security_group.deleted_at %></td>
+    <td><%= security_group.deleted %></td>
+    <td><%= security_group.name %></td>
+    <td><%= security_group.description %></td>
+    <td><%= security_group.user_id %></td>
+    <td><%= security_group.project_id %></td>
+    <td><%= link_to 'Show', security_group %></td>
+    <td><%= link_to 'Edit', edit_security_group_path(security_group) %></td>
+    <td><%= link_to 'Destroy', security_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Security group', new_security_group_path %>

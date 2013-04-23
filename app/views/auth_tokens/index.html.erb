@@ -1,0 +1,39 @@
+<h1>Listing auth_tokens</h1>
+
+<table>
+  <tr>
+    <th>Token hash</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>User</th>
+    <th>Server management url</th>
+    <th>Storage url</th>
+    <th>Cdn management url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @auth_tokens.each do |auth_token| %>
+  <tr>
+    <td><%= auth_token.token_hash %></td>
+    <td><%= auth_token.created_at %></td>
+    <td><%= auth_token.updated_at %></td>
+    <td><%= auth_token.deleted_at %></td>
+    <td><%= auth_token.deleted %></td>
+    <td><%= auth_token.user_id %></td>
+    <td><%= auth_token.server_management_url %></td>
+    <td><%= auth_token.storage_url %></td>
+    <td><%= auth_token.cdn_management_url %></td>
+    <td><%= link_to 'Show', auth_token %></td>
+    <td><%= link_to 'Edit', edit_auth_token_path(auth_token) %></td>
+    <td><%= link_to 'Destroy', auth_token, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Auth token', new_auth_token_path %>

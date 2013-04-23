@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @security_group_rule.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @security_group_rule.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @security_group_rule.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @security_group_rule.deleted %>
+</p>
+
+<p>
+  <b>Parent group:</b>
+  <%= @security_group_rule.parent_group_id %>
+</p>
+
+<p>
+  <b>Protocol:</b>
+  <%= @security_group_rule.protocol %>
+</p>
+
+<p>
+  <b>From port:</b>
+  <%= @security_group_rule.from_port %>
+</p>
+
+<p>
+  <b>To port:</b>
+  <%= @security_group_rule.to_port %>
+</p>
+
+<p>
+  <b>Cidr:</b>
+  <%= @security_group_rule.cidr %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @security_group_rule.group_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_security_group_rule_path(@security_group_rule) %> |
+<%= link_to 'Back', security_group_rules_path %>

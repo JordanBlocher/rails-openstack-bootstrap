@@ -1,0 +1,55 @@
+
+<% content_for :head do %>
+<%= stylesheet_link_tag 'home.css.scss' -%>
+<% end %>
+
+    <!-- Carousel
+    ================================================== -->
+    
+    <%= content_tag :div, :id => "myCarousel", :class => "carousel slide" do -%> 
+      <%= content_tag :div, :class => "carousel-inner" do -%>
+
+        <%= content_tag :div, :class => "item active" do -%>
+          <%= image_tag("cloud1.jpg", :alt=>"") %>   
+          <%= content_tag :div, :class => "container" do -%>
+            <%= content_tag :div, :class => "carousel-caption" do -%>
+              <h1>Cloud Database</h1>
+              <p class="lead">Cloud Computing Session</p>
+              <%= link_to "Sign in", user_session_path, :class => "btn btn-large btn-primary" %>
+    <% end -%>   
+      <% end -%> 
+      <% end -%> 
+              <%= content_tag :div, :class => "item" do -%>
+          <%= image_tag("cloud2.jpg", :alt=>"") %>   
+          <%= content_tag :div, :class => "container" do -%>
+            <%= content_tag :div, :class => "carousel-caption"  do-%>
+              <h1>View the Dashboard</h1>
+              <p class="lead">Cloud Computing Session</p>
+              <%= link_to "Sign in", user_session_path, :class => "btn btn-large btn-primary" %>
+    <% end -%>   
+    <% end -%>   
+    <% end -%>   
+          <%= content_tag :div, :class => "item" do -%>
+          <%= image_tag("cloud3.jpg", :alt=>"")%>   
+          <%= content_tag :div, :class => "container" do -%>
+            <%= content_tag :div, :class => "carousel-caption" do -%>
+              <h1>Cloud Portal</h1>
+              <p class="lead">Cloud Computing Session</p>
+              <%= link_to "Sign in", user_session_path, :class => "btn btn-large btn-primary" %>
+      <% end -%>
+      <% end -%>
+      <% end -%>
+
+      <% end -%>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+      
+    <% end -%>
+    
+    <!-- /.carousel -->
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<%= form_for(@security_group_rule) do |f| %>
+  <% if @security_group_rule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@security_group_rule.errors.count, "error") %> prohibited this security_group_rule from being saved:</h2>
+
+      <ul>
+      <% @security_group_rule.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_group_id %><br />
+    <%= f.number_field :parent_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :protocol %><br />
+    <%= f.text_field :protocol %>
+  </div>
+  <div class="field">
+    <%= f.label :from_port %><br />
+    <%= f.number_field :from_port %>
+  </div>
+  <div class="field">
+    <%= f.label :to_port %><br />
+    <%= f.number_field :to_port %>
+  </div>
+  <div class="field">
+    <%= f.label :cidr %><br />
+    <%= f.text_field :cidr %>
+  </div>
+  <div class="field">
+    <%= f.label :group_id %><br />
+    <%= f.number_field :group_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

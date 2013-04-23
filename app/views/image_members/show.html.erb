@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image:</b>
+  <%= @image_member.image_id %>
+</p>
+
+<p>
+  <b>Member:</b>
+  <%= @image_member.member %>
+</p>
+
+<p>
+  <b>Can share:</b>
+  <%= @image_member.can_share %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @image_member.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @image_member.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @image_member.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @image_member.deleted %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_member_path(@image_member) %> |
+<%= link_to 'Back', image_members_path %>

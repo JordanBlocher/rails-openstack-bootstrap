@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @key_pair.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @key_pair.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @key_pair.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @key_pair.deleted %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @key_pair.name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @key_pair.user_id %>
+</p>
+
+<p>
+  <b>Fingerprint:</b>
+  <%= @key_pair.fingerprint %>
+</p>
+
+<p>
+  <b>Public key:</b>
+  <%= @key_pair.public_key %>
+</p>
+
+
+<%= link_to 'Edit', edit_key_pair_path(@key_pair) %> |
+<%= link_to 'Back', key_pairs_path %>

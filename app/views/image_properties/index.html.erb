@@ -1,0 +1,35 @@
+<h1>Listing image_properties</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Value</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @image_properties.each do |image_property| %>
+  <tr>
+    <td><%= image_property.image_id %></td>
+    <td><%= image_property.name %></td>
+    <td><%= image_property.value %></td>
+    <td><%= image_property.created_at %></td>
+    <td><%= image_property.updated_at %></td>
+    <td><%= image_property.deleted_at %></td>
+    <td><%= image_property.deleted %></td>
+    <td><%= link_to 'Show', image_property %></td>
+    <td><%= link_to 'Edit', edit_image_property_path(image_property) %></td>
+    <td><%= link_to 'Destroy', image_property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Image property', new_image_property_path %>

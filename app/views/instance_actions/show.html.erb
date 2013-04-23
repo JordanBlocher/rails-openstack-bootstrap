@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @instance_action.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @instance_action.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @instance_action.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @instance_action.deleted %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%= @instance_action.action %>
+</p>
+
+<p>
+  <b>Error:</b>
+  <%= @instance_action.error %>
+</p>
+
+<p>
+  <b>Instance uuid:</b>
+  <%= @instance_action.instance_uuid %>
+</p>
+
+
+<%= link_to 'Edit', edit_instance_action_path(@instance_action) %> |
+<%= link_to 'Back', instance_actions_path %>

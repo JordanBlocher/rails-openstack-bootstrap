@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @fixed_ip.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @fixed_ip.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @fixed_ip.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @fixed_ip.deleted %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @fixed_ip.address %>
+</p>
+
+<p>
+  <b>Network:</b>
+  <%= @fixed_ip.network_id %>
+</p>
+
+<p>
+  <b>Instance:</b>
+  <%= @fixed_ip.instance_id %>
+</p>
+
+<p>
+  <b>Allocated:</b>
+  <%= @fixed_ip.allocated %>
+</p>
+
+<p>
+  <b>Leased:</b>
+  <%= @fixed_ip.leased %>
+</p>
+
+<p>
+  <b>Reserved:</b>
+  <%= @fixed_ip.reserved %>
+</p>
+
+<p>
+  <b>Virtual interface:</b>
+  <%= @fixed_ip.virtual_interface_id %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @fixed_ip.host %>
+</p>
+
+
+<%= link_to 'Edit', edit_fixed_ip_path(@fixed_ip) %> |
+<%= link_to 'Back', fixed_ips_path %>

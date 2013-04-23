@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  created_at: 2013-04-21 13:36:39
+  updated_at: 2013-04-21 13:36:39
+  deleted_at: 2013-04-21 13:36:39
+  deleted: false
+  protocol: MyString
+  from_port: 1
+  to_port: 1
+  cidr: MyString
+
+two:
+  created_at: 2013-04-21 13:36:39
+  updated_at: 2013-04-21 13:36:39
+  deleted_at: 2013-04-21 13:36:39
+  deleted: false
+  protocol: MyString
+  from_port: 1
+  to_port: 1
+  cidr: MyString

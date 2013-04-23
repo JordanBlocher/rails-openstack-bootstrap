@@ -1,0 +1,49 @@
+<h1>Listing cells</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Api url</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Weight offset</th>
+    <th>Weight scale</th>
+    <th>Name</th>
+    <th>Is parent</th>
+    <th>Rpc host</th>
+    <th>Rpc port</th>
+    <th>Rpc virtual host</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cells.each do |cell| %>
+  <tr>
+    <td><%= cell.created_at %></td>
+    <td><%= cell.updated_at %></td>
+    <td><%= cell.deleted_at %></td>
+    <td><%= cell.deleted %></td>
+    <td><%= cell.api_url %></td>
+    <td><%= cell.username %></td>
+    <td><%= cell.password %></td>
+    <td><%= cell.weight_offset %></td>
+    <td><%= cell.weight_scale %></td>
+    <td><%= cell.name %></td>
+    <td><%= cell.is_parent %></td>
+    <td><%= cell.rpc_host %></td>
+    <td><%= cell.rpc_port %></td>
+    <td><%= cell.rpc_virtual_host %></td>
+    <td><%= link_to 'Show', cell %></td>
+    <td><%= link_to 'Edit', edit_cell_path(cell) %></td>
+    <td><%= link_to 'Destroy', cell, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cell', new_cell_path %>

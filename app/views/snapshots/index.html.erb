@@ -1,0 +1,47 @@
+<h1>Listing snapshots</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Volume</th>
+    <th>User</th>
+    <th>Project</th>
+    <th>Status</th>
+    <th>Progress</th>
+    <th>Volume size</th>
+    <th>Scheduled at</th>
+    <th>Display name</th>
+    <th>Display description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @snapshots.each do |snapshot| %>
+  <tr>
+    <td><%= snapshot.created_at %></td>
+    <td><%= snapshot.updated_at %></td>
+    <td><%= snapshot.deleted_at %></td>
+    <td><%= snapshot.deleted %></td>
+    <td><%= snapshot.volume_id %></td>
+    <td><%= snapshot.user_id %></td>
+    <td><%= snapshot.project_id %></td>
+    <td><%= snapshot.status %></td>
+    <td><%= snapshot.progress %></td>
+    <td><%= snapshot.volume_size %></td>
+    <td><%= snapshot.scheduled_at %></td>
+    <td><%= snapshot.display_name %></td>
+    <td><%= snapshot.display_description %></td>
+    <td><%= link_to 'Show', snapshot %></td>
+    <td><%= link_to 'Edit', edit_snapshot_path(snapshot) %></td>
+    <td><%= link_to 'Destroy', snapshot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Snapshot', new_snapshot_path %>

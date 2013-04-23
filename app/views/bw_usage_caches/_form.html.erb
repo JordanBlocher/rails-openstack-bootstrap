@@ -1,0 +1,53 @@
+<%= form_for(@bw_usage_cach) do |f| %>
+  <% if @bw_usage_cach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bw_usage_cach.errors.count, "error") %> prohibited this bw_usage_cach from being saved:</h2>
+
+      <ul>
+      <% @bw_usage_cach.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :start_period %><br />
+    <%= f.datetime_select :start_period %>
+  </div>
+  <div class="field">
+    <%= f.label :last_refreshed %><br />
+    <%= f.datetime_select :last_refreshed %>
+  </div>
+  <div class="field">
+    <%= f.label :bw_in %><br />
+    <%= f.number_field :bw_in %>
+  </div>
+  <div class="field">
+    <%= f.label :bw_out %><br />
+    <%= f.number_field :bw_out %>
+  </div>
+  <div class="field">
+    <%= f.label :mac %><br />
+    <%= f.text_field :mac %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

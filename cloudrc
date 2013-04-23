@@ -1,0 +1,8 @@
+EXPORT CLOUD_ENV="localhost"
+EXPORT GLANCE_ENV="localhost"
+EXPORT NOVA_ENV="localhost"
+
+EXPORT Rails.env="development"
+
+EXPORT MYSQL_PASS=""
+EXPORT PG_PASS=""

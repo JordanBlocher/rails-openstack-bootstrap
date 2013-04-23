@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @console_pool.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @console_pool.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @console_pool.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @console_pool.deleted %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @console_pool.address %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @console_pool.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @console_pool.password %>
+</p>
+
+<p>
+  <b>Console type:</b>
+  <%= @console_pool.console_type %>
+</p>
+
+<p>
+  <b>Public hostname:</b>
+  <%= @console_pool.public_hostname %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @console_pool.host %>
+</p>
+
+<p>
+  <b>Compute host:</b>
+  <%= @console_pool.compute_host %>
+</p>
+
+
+<%= link_to 'Edit', edit_console_pool_path(@console_pool) %> |
+<%= link_to 'Back', console_pools_path %>

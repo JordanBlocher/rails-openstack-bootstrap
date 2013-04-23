@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @service.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @service.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @service.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @service.deleted %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @service.host %>
+</p>
+
+<p>
+  <b>Binary:</b>
+  <%= @service.binary %>
+</p>
+
+<p>
+  <b>Topic:</b>
+  <%= @service.topic %>
+</p>
+
+<p>
+  <b>Report count:</b>
+  <%= @service.report_count %>
+</p>
+
+<p>
+  <b>Disabled:</b>
+  <%= @service.disabled %>
+</p>
+
+<p>
+  <b>Availability zone:</b>
+  <%= @service.availability_zone %>
+</p>
+
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

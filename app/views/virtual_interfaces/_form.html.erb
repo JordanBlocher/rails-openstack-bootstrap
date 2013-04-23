@@ -1,0 +1,49 @@
+<%= form_for(@virtual_interface) do |f| %>
+  <% if @virtual_interface.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@virtual_interface.errors.count, "error") %> prohibited this virtual_interface from being saved:</h2>
+
+      <ul>
+      <% @virtual_interface.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :network_id %><br />
+    <%= f.number_field :network_id %>
+  </div>
+  <div class="field">
+    <%= f.label :instance_id %><br />
+    <%= f.number_field :instance_id %>
+  </div>
+  <div class="field">
+    <%= f.label :uuid %><br />
+    <%= f.text_field :uuid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
