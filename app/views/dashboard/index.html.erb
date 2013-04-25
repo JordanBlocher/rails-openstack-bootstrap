@@ -14,7 +14,7 @@
 
 <%= button_to "Networks", networks_path, :method => "get", :class => "btn btn-large btn-primary"%>
 <%= button_to "Projects", projects_path, :method => "get", :class => "btn btn-large btn-primary"%>
-<%= button_to "Images", image_members_path, :method => "get", :class => "btn btn-large btn-primary"%>
+<%= button_to "Images", image_properties_path, :method => "get", :class => "btn btn-large btn-primary"%>
 
 <%= content_tag :div, :class => "lock" do -%>
     <% if current_user.admin?%>

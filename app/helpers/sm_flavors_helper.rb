@@ -1,2 +1,0 @@
-module SmFlavorsHelper
-end

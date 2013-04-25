@@ -9,10 +9,12 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'ruby-mysql'
 gem 'mysql2'
+gem 'mysql'
 
 # Adapters
 gem 'activerecord-postgresql-adapter'
 gem 'activerecord-ruby_mysql-adapter'
+gem 'activerecord-mysql2-adapter'
 
 gem 'schema_to_scaffold'
 
@@ -43,6 +45,10 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'rails-erd', :git => 'git://github.com/voormedia/rails-erd.git'
+end
+  
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

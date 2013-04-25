@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/voormedia/rails-erd.git
+  revision: d29b0c29fcfa9783c1070a915e7549a4e66d8441
+  specs:
+    rails-erd (1.1.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      choice (~> 0.1.6)
+      ruby-graphviz (~> 1.0.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -22,6 +32,8 @@ GEM
       activesupport (= 3.2.13)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-mysql2-adapter (0.0.3)
+      mysql2
     activerecord-postgresql-adapter (0.0.1)
       pg
     activerecord-ruby_mysql-adapter (0.1)
@@ -37,6 +49,7 @@ GEM
       sass (~> 3.2)
     builder (3.0.4)
     cancan (1.6.9)
+    choice (0.1.6)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -67,6 +80,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.2)
+    mysql (2.9.1)
     mysql2 (0.3.11)
     orm_adapter (0.4.0)
     pg (0.15.1)
@@ -98,6 +112,7 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    ruby-graphviz (1.0.8)
     ruby-mysql (2.9.11)
     sass (3.2.7)
     sass-rails (3.2.6)
@@ -142,6 +157,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-mysql2-adapter
   activerecord-postgresql-adapter
   activerecord-ruby_mysql-adapter
   bootstrap-sass
@@ -149,9 +165,11 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
+  mysql
   mysql2
   pg
   rails (= 3.2.13)
+  rails-erd!
   ruby-mysql
   sass-rails (~> 3.2.3)
   schema_to_scaffold

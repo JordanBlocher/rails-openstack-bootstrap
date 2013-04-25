@@ -19,22 +19,22 @@ development:
   host: localhost
   pool: 5
   username: postgres
-  password: #{PG_PASS}
+  password: pg
 
 nova_development:
-  adapter: ruby_mysql
+  adapter: mysql2
   encoding: utf8
   database: nova
   username: root
-  password: #{MYSQL_PASS}
+  password: kikrat
   host: localhost
 
 glance_development:
-  adapter: ruby_mysql
+  adapter: mysql2
   encoding: utf8
   database: glance
   username: root
-  password: #{MYSQL_PASS}
+  password: kikrat
   host: localhost
 
 
@@ -66,7 +66,7 @@ test:
   password: #{PG_PASS}
 
 nova_test:
-  adapter: ruby_mysql
+  adapter: mysql2
   encoding: utf8
   database: nova
   username: root
@@ -74,7 +74,7 @@ nova_test:
   host: localhost
 
 glance_test:
-  adapter: ruby_mysql
+  adapter: mysql2
   encoding: utf8
   database: glance
   username: root
@@ -92,7 +92,7 @@ production:
   password: #{PG_PASS}
 
 nova_production:
-  adapter: ruby_mysql
+  adapter: mysql2
   encoding: utf8
   database: nova
   username: root
@@ -100,7 +100,7 @@ nova_production:
   host: #{NOVA_ENV}
 
 glance_production:
-  adapter: ruby_mysql
+  adapter: mysql2
   encoding: utf8
   database: glance
   username: root

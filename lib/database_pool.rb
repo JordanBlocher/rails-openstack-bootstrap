@@ -3,20 +3,20 @@ require 'active_record'
 class App < ActiveRecord::Base
       establish_connection(
          :adapter  => "postgresql",
-         :host     => "#CLOUD_ENV",
+         :host     => "localhost",
          :username => "postgres",
-         :password => "PG_PASS",
-         :database => "cloud_#{Rails.env}"
+         :password => "pg",
+         :database => "cloud_development"
 )
   self.abstract_class = true
 end
 
 class Nova < ActiveRecord::Base
       establish_connection(
-         :adapter  => "mysql2",
-         :host     => "#NOVA_ENV",
+         :adapter  => "ruby_mysql",
+         :host     => "localhost",
          :username => "root",
-         :password => "#{SQL_PASS}",
+         :password => "kikrat",
          :database => "nova"
 )
   self.abstract_class = true
@@ -24,10 +24,10 @@ end
 
 class Glance < ActiveRecord::Base
       establish_connection(
-         :adapter  => "mysql2",
-         :host     => "#GLANCE_ENV",
+         :adapter  => "ruby_mysql",
+         :host     => "localhost",
          :username => "root",
-         :password => "#{SQL_PASS}",
+         :password => "kikrat",
          :database => "glance"
 )
   self.abstract_class = true
