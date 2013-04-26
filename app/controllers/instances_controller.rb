@@ -1,6 +1,7 @@
 class InstancesController < ApplicationController
+  before_filter :authenticate_user!
   def index
-    @instances = Instance.where("vm_state =?", "active")
+    @instances = Instance.where("vm_state =? OR vm_state=?", "active", "building")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -8,7 +9,7 @@ class InstancesController < ApplicationController
     end
   end
 
-def history
+ def history
     @instances = Instance.all
 
     respond_to do |format|

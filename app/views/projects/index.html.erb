@@ -1,35 +1,37 @@
-<h1>Listing projects</h1>
-
-<table>
-  <tr>
-    <th>Created at</th>
-    <th>Updated at</th>
-    <th>Deleted at</th>
-    <th>Deleted</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Project manager</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @projects.each do |project| %>
-  <tr>
-    <td><%= project.created_at %></td>
-    <td><%= project.updated_at %></td>
-    <td><%= project.deleted_at %></td>
-    <td><%= project.deleted %></td>
-    <td><%= project.name %></td>
-    <td><%= project.description %></td>
-    <td><%= project.project_manager %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% content_for :head do %>
+<%= stylesheet_link_tag 'dashboard-base.css.scss' -%>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Project', new_project_path %>
+<%= content_tag :div, :class => "dashboard" do -%>
+
+    <%= image_tag("keys.jpg", :alt=>"")%>
+        <%= content_tag :div, :class => "container" do -%>
+        <%= content_tag :div, :class => "dashboard-caption" do -%>
+        <h1> Projects </h1>
+        <% end %>
+        <% end %>
+    <% end %>
+
+
+<%= content_tag :div, :class => "container-fluid" do -%>
+<%= content_tag :div, :class => "row-fluid" do -%>
+
+<%= content_tag :div, :class => "span2" do -%>
+
+<%= button_to "Projects", projects_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Images", image_properties_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Compute Nodes", compute_nodes_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Services", services_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Snapshots", snapshots_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "VM Interfaces", virtual_interfaces_path, :method => "get", :class => "btn btn-primary"%>
+
+<% end %>
+
+<%= content_tag :div, :id =>"view", :class => "span10" do -%>
+
+<%= render 'projects/default' %>
+
+<% end %>
+<% end %>
+<% end %>

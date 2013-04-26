@@ -45,9 +45,10 @@ Cloud::Application.routes.draw do
   resources :key_pairs
 
 
-  resources :instances, :controller => "instances" do
-    post :toggle, :on => :collection
+  resources :instances do
+    get 'history', :on => :collection
   end
+
 
   resources :instance_types
 

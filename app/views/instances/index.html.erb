@@ -19,13 +19,15 @@
 
 <%= content_tag :div, :class => "span2" do -%>
 
-<%= button_to "History", instances_path, :method => "get", :class => "btn btn-primary"%>
-<%= button_to "Projects", projects_path, :method => "get", :class => "btn btn-primary"%>
-<%= button_to "Images", image_properties_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Active", history_instances_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Types", instance_types_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Images", s3_images_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "History", history_instances_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Info Cache", instance_info_caches_path, :method => "get", :class => "btn btn-primary"%>
 
 <% end %>
 
-<%= content_tag :div, :class => "span10" do -%>
+<%= content_tag :div, :id =>"view", :class => "span10" do -%>
 
 <%= render 'instances/default' %>
 
