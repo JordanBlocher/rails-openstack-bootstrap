@@ -1,0 +1,33 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>User</th>
+    <th>Project</th>
+    <th>File name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @certificates.each do |certificate| %>
+  <tr>
+    <td><%= certificate.created_at %></td>
+    <td><%= certificate.updated_at %></td>
+    <td><%= certificate.deleted_at %></td>
+    <td><%= certificate.deleted %></td>
+    <td><%= certificate.user_id %></td>
+    <td><%= certificate.project_id %></td>
+    <td><%= certificate.file_name %></td>
+    <td><%= link_to 'Show', certificate %></td>
+    <td><%= link_to 'Edit', edit_certificate_path(certificate) %></td>
+    <td><%= link_to 'Destroy', certificate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Certificate', new_certificate_path %>
