@@ -2,8 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 require './lib/database_pool'
-# Require for migrations
-# require './lib/tasks/migrate'
 
 
 if defined?(Bundler)

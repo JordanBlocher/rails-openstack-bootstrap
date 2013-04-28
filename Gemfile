@@ -8,13 +8,11 @@ gem 'rails', '3.2.13'
 # Databases
 gem 'pg'
 gem 'ruby-mysql'
-gem 'mysql2'
-gem 'mysql'
+gem 'mysql2', '0.3.11'
 
 # Adapters
 gem 'activerecord-postgresql-adapter'
 gem 'activerecord-ruby_mysql-adapter'
-gem 'activerecord-mysql2-adapter'
 
 gem 'schema_to_scaffold'
 
@@ -29,6 +27,9 @@ gem 'devise'
 
 # Authorization
 gem 'cancan'
+
+# Composite keys
+gem 'composite_primary_keys'
 
 # Gems used only for assets and not required
 # in production environments by default.

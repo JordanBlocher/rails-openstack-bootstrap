@@ -1,10 +1,16 @@
 Cloud::Application.routes.draw do
 
 
-  devise_for :users, :path_prefix => 'd'
+  resources :instances
 
 
-  resources :user, :controller => "user" do
+  resources :security_group_instance_associations
+
+
+  devise_for :cloud_users, :path_prefix => 'd'
+
+
+  resources :cloud_user, :controller => "cloud_user" do
     post :upgrade, :on => :collection
   end
     
@@ -15,7 +21,16 @@ Cloud::Application.routes.draw do
   get "dashboard/index"
 
 
-  match '/users/:id', :to => 'dashboard#index', :as => :user
+  match '/cloud_users/:id', :to => 'dashboard#index', :as => :cloud_user
+
+
+  resources :projects
+
+
+  resources :users
+
+
+  resource :user_project_associations
 
 
   resources :virtual_interfaces
@@ -36,9 +51,6 @@ Cloud::Application.routes.draw do
   resources :s3_images
 
 
-  resources :projects
-
-
   resources :networks
 
 
@@ -51,9 +63,6 @@ Cloud::Application.routes.draw do
 
 
   resources :instance_types
-
-
-  resources :instance_type_extra_specs
 
 
   resources :instance_info_caches

@@ -1,7 +1,8 @@
 class InstancesController < ApplicationController
-  before_filter :authenticate_user!
+  # GET /instances
+  # GET /instances.json
   def index
-    @instances = Instance.where("vm_state =? OR vm_state=?", "active", "building")
+    @instances = Instance.where("vm_state =? OR vm_state =?", "active", "building")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -9,7 +10,9 @@ class InstancesController < ApplicationController
     end
   end
 
- def history
+  # GET /instances
+  # GET /instances.json
+  def history
     @instances = Instance.all
 
     respond_to do |format|
@@ -17,7 +20,9 @@ class InstancesController < ApplicationController
       format.json { render json: @instances }
     end
   end
-
+  
+  # GET /instances/1
+  # GET /instances/1.json
   def show
     @instance = Instance.find(params[:id])
 
@@ -27,6 +32,8 @@ class InstancesController < ApplicationController
     end
   end
 
+  # GET /instances/new
+  # GET /instances/new.json
   def new
     @instance = Instance.new
 
@@ -36,10 +43,13 @@ class InstancesController < ApplicationController
     end
   end
 
+  # GET /instances/1/edit
   def edit
     @instance = Instance.find(params[:id])
   end
 
+  # POST /instances
+  # POST /instances.json
   def create
     @instance = Instance.new(params[:instance])
 
@@ -54,6 +64,8 @@ class InstancesController < ApplicationController
     end
   end
 
+  # PUT /instances/1
+  # PUT /instances/1.json
   def update
     @instance = Instance.find(params[:id])
 
@@ -68,6 +80,8 @@ class InstancesController < ApplicationController
     end
   end
 
+  # DELETE /instances/1
+  # DELETE /instances/1.json
   def destroy
     @instance = Instance.find(params[:id])
     @instance.destroy

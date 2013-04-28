@@ -1,36 +1,119 @@
-<% content_for :head do %>
-<%= stylesheet_link_tag 'dashboard-base.css.scss' -%>
+<h1>Listing instances</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>Internal</th>
+    <th>User</th>
+    <th>Project</th>
+    <th>Image ref</th>
+    <th>Kernel</th>
+    <th>Ramdisk</th>
+    <th>Server name</th>
+    <th>Launch index</th>
+    <th>Key name</th>
+    <th>Key data</th>
+    <th>Power state</th>
+    <th>Vm state</th>
+    <th>Memory mb</th>
+    <th>Vcpus</th>
+    <th>Hostname</th>
+    <th>Host</th>
+    <th>User data</th>
+    <th>Reservation</th>
+    <th>Scheduled at</th>
+    <th>Launched at</th>
+    <th>Terminated at</th>
+    <th>Display name</th>
+    <th>Display description</th>
+    <th>Availability zone</th>
+    <th>Locked</th>
+    <th>Os type</th>
+    <th>Launched on</th>
+    <th>Instance type</th>
+    <th>Vm mode</th>
+    <th>Uuid</th>
+    <th>Architecture</th>
+    <th>Root device name</th>
+    <th>Access ip v4</th>
+    <th>Access ip v6</th>
+    <th>Config drive</th>
+    <th>Task state</th>
+    <th>Default ephemeral device</th>
+    <th>Default swap device</th>
+    <th>Progress</th>
+    <th>Auto disk config</th>
+    <th>Shutdown terminate</th>
+    <th>Disable terminate</th>
+    <th>Root gb</th>
+    <th>Ephemeral gb</th>
+    <th>Cell name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instances.each do |instance| %>
+  <tr>
+    <td><%= instance.created_at %></td>
+    <td><%= instance.updated_at %></td>
+    <td><%= instance.deleted_at %></td>
+    <td><%= instance.deleted %></td>
+    <td><%= instance.internal_id %></td>
+    <td><%= instance.user_id %></td>
+    <td><%= instance.project_id %></td>
+    <td><%= instance.image_ref %></td>
+    <td><%= instance.kernel_id %></td>
+    <td><%= instance.ramdisk_id %></td>
+    <td><%= instance.server_name %></td>
+    <td><%= instance.launch_index %></td>
+    <td><%= instance.key_name %></td>
+    <td><%= instance.key_data %></td>
+    <td><%= instance.power_state %></td>
+    <td><%= instance.vm_state %></td>
+    <td><%= instance.memory_mb %></td>
+    <td><%= instance.vcpus %></td>
+    <td><%= instance.hostname %></td>
+    <td><%= instance.host %></td>
+    <td><%= instance.user_data %></td>
+    <td><%= instance.reservation_id %></td>
+    <td><%= instance.scheduled_at %></td>
+    <td><%= instance.launched_at %></td>
+    <td><%= instance.terminated_at %></td>
+    <td><%= instance.display_name %></td>
+    <td><%= instance.display_description %></td>
+    <td><%= instance.availability_zone %></td>
+    <td><%= instance.locked %></td>
+    <td><%= instance.os_type %></td>
+    <td><%= instance.launched_on %></td>
+    <td><%= instance.instance_type_id %></td>
+    <td><%= instance.vm_mode %></td>
+    <td><%= instance.uuid %></td>
+    <td><%= instance.architecture %></td>
+    <td><%= instance.root_device_name %></td>
+    <td><%= instance.access_ip_v4 %></td>
+    <td><%= instance.access_ip_v6 %></td>
+    <td><%= instance.config_drive %></td>
+    <td><%= instance.task_state %></td>
+    <td><%= instance.default_ephemeral_device %></td>
+    <td><%= instance.default_swap_device %></td>
+    <td><%= instance.progress %></td>
+    <td><%= instance.auto_disk_config %></td>
+    <td><%= instance.shutdown_terminate %></td>
+    <td><%= instance.disable_terminate %></td>
+    <td><%= instance.root_gb %></td>
+    <td><%= instance.ephemeral_gb %></td>
+    <td><%= instance.cell_name %></td>
+    <td><%= link_to 'Show', instance %></td>
+    <td><%= link_to 'Edit', edit_instance_path(instance) %></td>
+    <td><%= link_to 'Destroy', instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
 <% end %>
+</table>
 
+<br />
 
-<%= content_tag :div, :class => "dashboard" do -%>
-
-    <%= image_tag("keys.jpg", :alt=>"")%>
-        <%= content_tag :div, :class => "container" do -%>
-        <%= content_tag :div, :class => "dashboard-caption" do -%>
-        <h1> Instances </h1>
-        <% end %>
-        <% end %>
-    <% end %>
-
-
-<%= content_tag :div, :class => "container-fluid" do -%>
-<%= content_tag :div, :class => "row-fluid" do -%>
-
-<%= content_tag :div, :class => "span2" do -%>
-
-<%= button_to "Active", history_instances_path, :method => "get", :class => "btn btn-primary"%>
-<%= button_to "Types", instance_types_path, :method => "get", :class => "btn btn-primary"%>
-<%= button_to "Images", s3_images_path, :method => "get", :class => "btn btn-primary"%>
-<%= button_to "History", history_instances_path, :method => "get", :class => "btn btn-primary"%>
-<%= button_to "Info Cache", instance_info_caches_path, :method => "get", :class => "btn btn-primary"%>
-
-<% end %>
-
-<%= content_tag :div, :id =>"view", :class => "span10" do -%>
-
-<%= render 'instances/default' %>
-
-<% end %>
-<% end %>
-<% end %>
+<%= link_to 'New Instance', new_instance_path %>

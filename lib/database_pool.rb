@@ -13,7 +13,7 @@ end
 
 class Nova < ActiveRecord::Base
       establish_connection(
-         :adapter  => "ruby_mysql",
+         :adapter  => "mysql2",
          :host     => "localhost",
          :username => "root",
          :password => "kikrat",
@@ -24,7 +24,7 @@ end
 
 class Glance < ActiveRecord::Base
       establish_connection(
-         :adapter  => "ruby_mysql",
+         :adapter  => "mysql2",
          :host     => "localhost",
          :username => "root",
          :password => "kikrat",

@@ -1,4 +1,4 @@
 ./lib/database_pool.rb
 ./config/database.yml
-/tmp
-/log
+./tmp
+./log

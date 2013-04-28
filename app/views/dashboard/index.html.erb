@@ -17,8 +17,8 @@
 <%= button_to "Security", certificates_path, :method => "get", :class => "btn btn-large btn-primary"%>
 
 <%= content_tag :div, :class => "lock" do -%>
-    <% if current_user.admin?%>
-        <%= link_to image_tag("lock.jpg", :class => "menu_icon", :alt => "Users"), user_index_path %>
+    <% if current_cloud_user.admin?%>
+        <%= link_to image_tag("lock.jpg", :class => "menu_icon", :alt => "Users"), cloud_user_index_path %>
     <% end %>
 <% end %>
     
@@ -47,5 +47,5 @@
 
 
 
-<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+<%= link_to('Logout', destroy_cloud_user_session_path, :method => :delete) %>        
 

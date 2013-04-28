@@ -8,7 +8,7 @@
     <%= image_tag("keys.jpg", :alt=>"")%>
         <%= content_tag :div, :class => "container" do -%>
         <%= content_tag :div, :class => "dashboard-caption" do -%>
-        <h1> Security </h1>
+        <h1> Certificates </h1>
         <% end %>
         <% end %>
     <% end %>
@@ -19,9 +19,8 @@
 
 <%= content_tag :div, :class => "span2" do -%>
 
-<%= button_to "Certificates", certificates_path, :method => "get", :class => "btn btn-primary"%>
 <%= button_to "Groups", security_groups_path, :method => "get", :class => "btn btn-primary"%>
-<%= if current_user.admin? %>
+<% if current_cloud_user.admin? %>
 <%= button_to "Keypairs", key_pairs_path, :method => "get", :class => "btn btn-primary"%>
 <%= button_to "Rules", security_group_rules_path, :method => "get", :class => "btn btn-primary"%>
 

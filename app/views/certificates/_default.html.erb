@@ -1,8 +1,6 @@
 <table class="table table-bordered">
   <tr>
     <th>Created at</th>
-    <th>Updated at</th>
-    <th>Deleted at</th>
     <th>Deleted</th>
     <th>User</th>
     <th>Project</th>
@@ -15,8 +13,6 @@
 <% @certificates.each do |certificate| %>
   <tr>
     <td><%= certificate.created_at %></td>
-    <td><%= certificate.updated_at %></td>
-    <td><%= certificate.deleted_at %></td>
     <td><%= certificate.deleted %></td>
     <td><%= certificate.user_id %></td>
     <td><%= certificate.project_id %></td>

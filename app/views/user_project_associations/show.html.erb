@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @user_project_association.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @user_project_association.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @user_project_association.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @user_project_association.deleted %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @user_project_association.user_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @user_project_association.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_project_association_path(@user_project_association) %> |
+<%= link_to 'Back', user_project_associations_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @user.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @user.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @user.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @user.deleted %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Access key:</b>
+  <%= @user.access_key %>
+</p>
+
+<p>
+  <b>Secret key:</b>
+  <%= @user.secret_key %>
+</p>
+
+<p>
+  <b>Is admin:</b>
+  <%= @user.is_admin %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

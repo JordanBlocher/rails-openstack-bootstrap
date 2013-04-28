@@ -12,5 +12,8 @@ class CreateVirtualInterfaces < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :virtual_interfaces, :address, :unique => true
+    add_index :virtual_interfaces, :network_id
+    add_index :virtual_interfaces, :instance_id 
   end
 end
