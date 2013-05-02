@@ -1,37 +1,35 @@
-<h1>Listing virtual_interfaces</h1>
-
-<table>
-  <tr>
-    <th>Created at</th>
-    <th>Updated at</th>
-    <th>Deleted at</th>
-    <th>Deleted</th>
-    <th>Address</th>
-    <th>Network</th>
-    <th>Instance</th>
-    <th>Uuid</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @virtual_interfaces.each do |virtual_interface| %>
-  <tr>
-    <td><%= virtual_interface.created_at %></td>
-    <td><%= virtual_interface.updated_at %></td>
-    <td><%= virtual_interface.deleted_at %></td>
-    <td><%= virtual_interface.deleted %></td>
-    <td><%= virtual_interface.address %></td>
-    <td><%= virtual_interface.network_id %></td>
-    <td><%= virtual_interface.instance_id %></td>
-    <td><%= virtual_interface.uuid %></td>
-    <td><%= link_to 'Show', virtual_interface %></td>
-    <td><%= link_to 'Edit', edit_virtual_interface_path(virtual_interface) %></td>
-    <td><%= link_to 'Destroy', virtual_interface, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% content_for :head do %>
+<%= stylesheet_link_tag 'dashboard-base.css.scss' -%>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Virtual interface', new_virtual_interface_path %>
+<%= content_tag :div, :class => "dashboard" do -%>
+
+    <%= image_tag("keys.jpg", :alt=>"")%>
+        <%= content_tag :div, :class => "container" do -%>
+        <%= content_tag :div, :class => "dashboard-caption" do -%>
+        <h1> Virtual Interfaces </h1>
+        <% end %>
+        <% end %>
+    <% end %>
+
+
+<%= content_tag :div, :class => "container-fluid" do -%>
+<%= content_tag :div, :class => "row-fluid" do -%>
+
+<%= content_tag :div, :class => "span2" do -%>
+
+<%= button_to "Networks", networks_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Fixed IPs", fixed_ips_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Floating IPs", floating_ips_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Virtual Interfaces", virtual_interfaces_path, :method => "get", :class => "btn btn-primary disabled"%>
+
+<% end %>
+
+<%= content_tag :div, :id =>"view", :class => "span10" do -%>
+
+<%= render 'virtual_interfaces/default' %>
+
+<% end %>
+<% end %>
+<% end %>

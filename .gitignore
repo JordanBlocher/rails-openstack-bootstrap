@@ -1,4 +1,5 @@
-./lib/database_pool.rb
-./config/database.yml
-./tmp
-./log
+lib/database_pool.rb
+config/database.yml
+tmp
+log
+db/migrate

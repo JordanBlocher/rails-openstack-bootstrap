@@ -6,17 +6,18 @@ class ApplicationController < ActionController::Base
   
   private
 
+
   # Tell Devise to redirect after sign_in
   def after_sign_in_path_for(resource_or_scope)
-    'https://cs-os-hv8.rd.unr.edu:3000/dashboard/index/'
+    dashboard_index_path
   end
 
   # Tell Devise to redirect after sign_out
   def after_sign_out_path_for(resource_or_scope)
-    'https://cs-os-hv8.rd.unr.edu:3000/home/index/'
+    home_index_path
   end 
 
   def signed_in_root_path_for(resource_or_scope)
-    'https://cs-os-hv8.rd.unr.edu:3000/dashboard/index/'
+    dashboard_index_path
   end
 end

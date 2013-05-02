@@ -1,14 +1,28 @@
 class FloatingIpsController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /floating_ips
   # GET /floating_ips.json
   def index
-    @floating_ips = FloatingIp.all
+    @floating_ips = FloatingIp.where(FloatingIp.arel_table[:fixed_ip_id].not_eq(nil));
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @floating_ips }
     end
   end
+
+  # GET /floating_ips
+  # GET /floating_ips.json
+  def unassigned
+    @floating_ips = FloatingIp.where(FloatingIp.arel_table[:fixed_ip_id].eq(nil));
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @floating_ips }
+    end
+  end
+
 
   # GET /floating_ips/1
   # GET /floating_ips/1.json

@@ -1,4 +1,6 @@
 class ImagePropertiesController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /image_properties
   # GET /image_properties.json
   def index

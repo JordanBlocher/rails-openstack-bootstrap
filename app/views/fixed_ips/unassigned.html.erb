@@ -8,7 +8,7 @@
     <%= image_tag("keys.jpg", :alt=>"")%>
         <%= content_tag :div, :class => "container" do -%>
         <%= content_tag :div, :class => "dashboard-caption" do -%>
-        <h1> Floating IPs </h1>
+        <h1> Fixed IPs </h1>
         <% end %>
         <% end %>
     <% end %>
@@ -19,17 +19,17 @@
 
 <%= content_tag :div, :class => "span2" do -%>
 
-<%= button_to "Networks", networks_path, :method => "get", :class => "btn btn-primary "%>
+<%= button_to "Networks", networks_path, :method => "get", :class => "btn btn-primary"%>
 <%= button_to "Fixed IPs", fixed_ips_path, :method => "get", :class => "btn btn-primary"%>
-<%= button_to "Floating IPs", floating_ips_path, :method => "get", :class => "btn btn-primary disabled"%>
+<%= button_to "Floating IPs", floating_ips_path, :method => "get", :class => "btn btn-primary"%>
 <%= button_to "Virtual Interfaces", virtual_interfaces_path, :method => "get", :class => "btn btn-primary"%>
-<%= button_to "Unassigned", unassigned_floating_ips_path, :method => "get", :class => "btn btn-info"%>
+<%= button_to "Unassigned", unassigned_fixed_ips_path, :method => "get", :class => "btn btn-info disabled"%>
 
 <% end %>
 
 <%= content_tag :div, :id =>"view", :class => "span10" do -%>
 
-<%= render 'floating_ips/default' %>
+<%= render 'fixed_ips/default' %>
 
 <% end %>
 <% end %>

@@ -1,11 +1,22 @@
 class CloudUserController < ApplicationController
-  
+  before_filter :authenticate_cloud_user!
+
   def index
-    @cloud_cloud_user = CloudUser.all
+    @cloud_user = CloudUser.all
+ 
+      respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @instances }
+    end
   end
 
   def show
     @cloud_user = CloudUser.find(params[:id])
+  
+      respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @instance }
+    end
   end
 
   def upgrade

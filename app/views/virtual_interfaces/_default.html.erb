@@ -1,0 +1,35 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Address</th>
+    <th>Network</th>
+    <th>Instance</th>
+    <th>Uuid</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @virtual_interfaces.each do |virtual_interface| %>
+  <tr>
+    <td><%= virtual_interface.address %></td>
+    <td><%= virtual_interface.network_id %></td>
+    <td><%= virtual_interface.instance_id %></td>
+    <td><%= virtual_interface.uuid %></td>
+    <td><%= virtual_interface.created_at %></td>
+    <td><%= virtual_interface.updated_at %></td>
+    <td><%= virtual_interface.deleted_at %></td>
+    <td><%= virtual_interface.deleted %></td>
+    <td><%= link_to 'Show', virtual_interface %></td>
+    <td><%= link_to 'Edit', edit_virtual_interface_path(virtual_interface) %></td>
+    <td><%= link_to 'Destroy', virtual_interface, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Virtual interface', new_virtual_interface_path %>

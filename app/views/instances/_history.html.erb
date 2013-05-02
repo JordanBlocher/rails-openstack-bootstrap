@@ -1,7 +1,5 @@
 <table class="table table-bordered">
   <tr>
-    <th>Created</th>
-    <th>Deleted</th>
     <th>User</th>
     <th>Project</th>
     <th>Key name</th>
@@ -15,13 +13,15 @@
     <th>Display name</th>
     <th>Uuid</th>
     <th>Root device name</th>
+    <th>Created</th>
+    <th>Deleted</th>
+    <th></th>
+    <th></th>
     <th></th>
   </tr>
 
 <% @instances.each do |instance| %>
   <tr>
-    <td><%= instance.created_at %></td>
-    <td><%= instance.deleted_at %></td>
     <td><%= instance.user_id %></td>
     <td><%= instance.project_id %></td>
     <td><%= instance.key_name %></td>
@@ -35,9 +35,11 @@
     <td><%= instance.display_name %></td>
     <td><%= instance.uuid %></td>
     <td><%= instance.root_device_name %></td>
+    <td><%= instance.created_at %></td>
+    <td><%= instance.deleted_at %></td>
     <td><%= link_to 'Show', instance %>
-    <%= link_to 'Edit', edit_instance_path(instance) %>
-    <%= link_to 'Destroy', instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Edit', edit_instance_path(instance) %></td>
+    <td><%= link_to 'Destroy', instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

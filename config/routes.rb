@@ -23,7 +23,9 @@ Cloud::Application.routes.draw do
   end
    
 
-  resources :instances
+  resources :instances do
+    get 'history', :on => :collection
+  end
 
 
   resources :security_group_instance_associations 
@@ -62,21 +64,20 @@ Cloud::Application.routes.draw do
   resources :key_pairs
 
 
-  resources :instances do
-    get 'history', :on => :collection
-  end
-
-
   resources :instance_types
 
 
   resources :instance_info_caches
 
 
-  resources :floating_ips
+  resources :floating_ips do
+    get 'unassigned', :on => :collection
+  end
 
 
-  resources :fixed_ips
+  resources :fixed_ips do
+    get 'unassigned', :on => :collection
+  end
 
 
   resources :compute_nodes

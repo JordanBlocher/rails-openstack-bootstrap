@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /projects
   # GET /projects.json
   def index

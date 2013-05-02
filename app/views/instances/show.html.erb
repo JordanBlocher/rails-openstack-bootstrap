@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<h1> 
+  <%= @instance.hostname %>
+</h1>
+
 <p>
   <b>Created at:</b>
   <%= @instance.created_at %>
@@ -65,10 +69,12 @@
   <%= @instance.key_name %>
 </p>
 
+<% if current_cloud_user.admin? %>
 <p>
   <b>Key data:</b>
   <%= @instance.key_data %>
 </p>
+<%end%>
 
 <p>
   <b>Power state:</b>

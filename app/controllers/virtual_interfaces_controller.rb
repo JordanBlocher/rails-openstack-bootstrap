@@ -1,4 +1,6 @@
 class VirtualInterfacesController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /virtual_interfaces
   # GET /virtual_interfaces.json
   def index

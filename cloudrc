@@ -1,7 +1,0 @@
-export CLOUD_ENV="localhost"
-export GLANCE_ENV="localhost"
-export NOVA_ENV="localhost"
-
-
-export MYSQL_PASS="kikrat"
-export PG_PASS="pg"

@@ -1,4 +1,6 @@
 class SnapshotsController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /snapshots
   # GET /snapshots.json
   def index

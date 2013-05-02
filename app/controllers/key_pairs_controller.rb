@@ -1,4 +1,6 @@
 class KeyPairsController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /key_pairs
   # GET /key_pairs.json
   def index

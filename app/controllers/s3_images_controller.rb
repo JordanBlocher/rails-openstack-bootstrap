@@ -1,4 +1,6 @@
 class S3ImagesController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /s3_images
   # GET /s3_images.json
   def index

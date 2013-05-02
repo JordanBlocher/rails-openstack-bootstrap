@@ -1,33 +1,35 @@
-<h1>Listing instance_info_caches</h1>
-
-<table>
-  <tr>
-    <th>Created at</th>
-    <th>Updated at</th>
-    <th>Deleted at</th>
-    <th>Deleted</th>
-    <th>Network info</th>
-    <th>Instance</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @instance_info_caches.each do |instance_info_cach| %>
-  <tr>
-    <td><%= instance_info_cach.created_at %></td>
-    <td><%= instance_info_cach.updated_at %></td>
-    <td><%= instance_info_cach.deleted_at %></td>
-    <td><%= instance_info_cach.deleted %></td>
-    <td><%= instance_info_cach.network_info %></td>
-    <td><%= instance_info_cach.instance_id %></td>
-    <td><%= link_to 'Show', instance_info_cach %></td>
-    <td><%= link_to 'Edit', edit_instance_info_cach_path(instance_info_cach) %></td>
-    <td><%= link_to 'Destroy', instance_info_cach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% content_for :head do %>
+<%= stylesheet_link_tag 'dashboard-base.css.scss' -%>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Instance info cach', new_instance_info_cach_path %>
+<%= content_tag :div, :class => "dashboard" do -%>
+
+    <%= image_tag("keys.jpg", :alt=>"")%>
+        <%= content_tag :div, :class => "container" do -%>
+        <%= content_tag :div, :class => "dashboard-caption" do -%>
+        <h1> Cache </h1>
+        <% end %>
+        <% end %>
+    <% end %>
+
+
+<%= content_tag :div, :class => "container-fluid" do -%>
+<%= content_tag :div, :class => "row-fluid" do -%>
+
+<%= content_tag :div, :class => "span2" do -%>
+
+<%= button_to "Instances", instances_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "History", history_instances_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Flavors", instance_types_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Cache", instance_info_caches_path, :method => "get", :class => "btn btn-primary disabled"%>
+
+<% end %>
+
+<%= content_tag :div, :class => "span10" do -%>
+
+<%= render 'instance_info_caches/default' %>
+
+<% end %>
+<% end %>
+<% end %>

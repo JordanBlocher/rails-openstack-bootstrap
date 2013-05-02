@@ -1,4 +1,6 @@
 class SecurityGroupsController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /security_groups
   # GET /security_groups.json
   def index

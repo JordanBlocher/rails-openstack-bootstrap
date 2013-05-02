@@ -1,4 +1,6 @@
 class ComputeNodesController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /compute_nodes
   # GET /compute_nodes.json
   def index

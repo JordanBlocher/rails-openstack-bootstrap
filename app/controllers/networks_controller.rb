@@ -1,4 +1,6 @@
 class NetworksController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /networks
   # GET /networks.json
   def index

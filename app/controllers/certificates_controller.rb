@@ -1,4 +1,6 @@
 class CertificatesController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /certificates
   # GET /certificates.json
   def index

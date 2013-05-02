@@ -1,13 +1,12 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
-    user ||= User.new 
-    if user.admin?
+  def initialize(cloud_user)
+    cloud_user ||= CloudUser.new 
+    if cloud_user.admin?
       can :manage, :all
     else
-      can :read, :all
-      cannot :manage, :all
+      cannot :read [User, KeyPair, SecurityGroupRules, CloudUser]
     end
   end
 end

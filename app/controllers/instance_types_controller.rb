@@ -1,4 +1,6 @@
 class InstanceTypesController < ApplicationController
+  before_filter :authenticate_cloud_user!
+  
   # GET /instance_types
   # GET /instance_types.json
   def index

@@ -1,14 +1,28 @@
 class FixedIpsController < ApplicationController
+  before_filter :authenticate_cloud_user!
+
   # GET /fixed_ips
   # GET /fixed_ips.json
   def index
-    @fixed_ips = FixedIp.all
+    @fixed_ips = FixedIp.where("allocated=?", 1);
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fixed_ips }
     end
   end
+
+  # GET /fixed_ips
+  # GET /fixed_ips.json
+  def unassigned
+    @fixed_ips = FixedIp.where("allocated=?", 0);
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @fixed_ips }
+    end
+  end
+
 
   # GET /fixed_ips/1
   # GET /fixed_ips/1.json

@@ -1,4 +1,6 @@
 class InstanceInfoCachesController < ApplicationController
+  before_filter :authenticate_cloud_user!
+  
   # GET /instance_info_caches
   # GET /instance_info_caches.json
   def index
