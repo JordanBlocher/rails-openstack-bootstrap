@@ -17,7 +17,11 @@
 <% @cloud_user.each do |cloud_user| %>
   <tr>
     <td><%= cloud_user.email %></br></br>
-    <%= button_to 'Add to Admins', cloud_user, {:controller => :cloud_user, :action => :upgrade, :class => "btn btn-warning" }%></td>
+    <% if cloud_user.admin? %>
+    <%= link_to('Remove from Admins', downgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+    <%else%>
+    <%= link_to('Add to Admins', upgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+    <%end%>
     <td><%= cloud_user.sign_in_count %></td>
     <td><%= cloud_user.current_sign_in_at %></td>
     <td><%= cloud_user.last_sign_in_at %></td>

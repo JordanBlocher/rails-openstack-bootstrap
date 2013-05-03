@@ -9,18 +9,12 @@ Cloud::Application.routes.draw do
 
   devise_for :cloud_users
 
-
-  devise_for :cloud_users, :skip => [:sessions]  do
-    get 'cloud_users/:id', :to => 'dashboard#index', :as => :cloud_user
-    get 'login' => 'devise/sessions#new', :as => :new_cloud_user_session
-    post 'login' => 'devise/sessions#create', :as => :cloud_user_session
-    delete 'logout' => 'devise/sessions#destroy', :as => :destroy_cloud_user_session
-  end
-
   
-  resources :cloud_user, :controller => "cloud_user" do
-    post :upgrade, :on => :collection
+  resources :cloud_user do 
+    get 'upgrade', :on => :member
+    get 'downgrade', :on => :member
   end
+  
    
 
   resources :instances do

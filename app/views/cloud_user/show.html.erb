@@ -45,6 +45,10 @@
   <%= @cloud_user.admin %>
 </p>
 
+<% if cloud_user.admin? %>
+<%= link_to('Remove from Admins', downgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+<%else%>
+<%= link_to('Add to Admins', upgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+<%end%>
 
-<%= button_to 'Add to Admins', @cloud_user, {:controller => :cloud_user, :action => :upgrade} %>
 <%= link_to 'Back', cloud_user_index_path %>
