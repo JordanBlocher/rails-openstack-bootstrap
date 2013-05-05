@@ -16,7 +16,7 @@ class Nova < ActiveRecord::Base
          :adapter  => "mysql2",
          :host     => "localhost",
          :username => "root",
-         :password => "kikrat",
+         :password => "root",
          :database => "nova"
 )
   self.abstract_class = true
@@ -27,7 +27,7 @@ class Glance < ActiveRecord::Base
          :adapter  => "mysql2",
          :host     => "localhost",
          :username => "root",
-         :password => "kikrat",
+         :password => "root",
          :database => "glance"
 )
   self.abstract_class = true

@@ -26,7 +26,7 @@ nova_development:
   encoding: utf8
   database: nova
   username: root
-  password: kikrat
+  password: root
   host: localhost
 
 glance_development:
@@ -34,7 +34,7 @@ glance_development:
   encoding: utf8
   database: glance
   username: root
-  password: kikrat
+  password: root
   host: localhost
 
 
@@ -70,7 +70,7 @@ nova_test:
   encoding: utf8
   database: nova
   username: root
-  password: kikrat
+  password: root
   host: localhost
 
 glance_test:
@@ -78,7 +78,7 @@ glance_test:
   encoding: utf8
   database: glance
   username: root
-  password: kikrat
+  password: root
   host: localhost
 
 
@@ -96,7 +96,7 @@ nova_production:
   encoding: utf8
   database: nova
   username: root
-  password: kikrat
+  password: root
   host: localhost
 
 glance_production:
@@ -104,7 +104,7 @@ glance_production:
   encoding: utf8
   database: glance
   username: root
-  password: kikrat
+  password: root
   host: localhost
 
 
