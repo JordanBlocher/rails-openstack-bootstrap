@@ -18,19 +18,20 @@
   <tr>
     <td><%= cloud_user.username %></td>
     <td><%= cloud_user.email %></td>
-   <td><%= cloud_user.sign_in_count %></td>
+    <td><%= cloud_user.sign_in_count %></td>
     <td><%= cloud_user.current_sign_in_at %></td>
     <td><%= cloud_user.last_sign_in_at %></td>
     <td><%= cloud_user.current_sign_in_ip %></td>
     <td><%= cloud_user.last_sign_in_ip %></td>
-    <td>
+    <td><%= cloud_user.admin %></br>
     <% if cloud_user.admin? %>
-    <%= link_to('Remove from Admins', downgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+    <%= link_to 'Remove from Admins', downgrade_cloud_user_path(cloud_user), :method =>"put", :class => "btn btn-warning" %></td>
     <%else%>
-    <%= link_to('Add to Admins', upgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+    <%= link_to 'Add to Admins', upgrade_cloud_user_path(cloud_user), :method => "put", :class => "btn btn-warning" %></td>
     <%end%></td>
     <td><%= cloud_user.created_at %></td>
-    <td><%= cloud_user.updated_at %></td>
+    <td><%= cloud_user.updated_at %></br>
+    <%= button_to 'History', history_cloud_user_path(cloud_user), :method => "get", :class => "btn btn-info" %> </td></td>
     <td><%= link_to 'Show', cloud_user %></td>
     <% if current_cloud_user == cloud_user %>
     <td><%= link_to 'Edit', edit_cloud_user_registration_path %></td>
@@ -38,6 +39,7 @@
   </tr>
 <% end %>
 </table>
+
 
 <br />
 

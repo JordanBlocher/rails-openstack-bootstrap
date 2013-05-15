@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Id</th>
+    <th>Updated at</th>
+    <th>Status</th>
+    <th>Changed by</th>
+    <th>Admin IP</th>
+  </tr>
+
+  <tr>
+<% @history[0].each do |key, value| %>
+    <td><%= value %></td>
+<% end %>
+  </tr>
+</table>
+
+<br />
+

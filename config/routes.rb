@@ -2,9 +2,6 @@ Cloud::Application.routes.draw do
 
 
 
-  resources :virtual_interface_cloud_user_associations
-
-
   get "home/index"
 
 
@@ -15,8 +12,9 @@ Cloud::Application.routes.draw do
 
   
   resources :cloud_user do 
-    get 'upgrade', :on => :member
-    get 'downgrade', :on => :member
+    put 'upgrade', :on => :member
+    put 'downgrade', :on => :member
+    get 'history', :on => :member
   end
   
 

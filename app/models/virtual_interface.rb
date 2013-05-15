@@ -6,9 +6,8 @@ class VirtualInterface < Nova
   has_many :compute_nodes
 
   has_one :network
-  has_many :instances
-  has_many :fixed_ips, :through => :instances
-  has_many :floating_ips, :through => :fixed_ips
+  has_one :instance
+  has_one :floating_ip
 
   has_many :virtual_interface_cloud_user_associations
   has_many_elsewhere :cloud_users, :through => :virtual_interface_cloud_user_associations

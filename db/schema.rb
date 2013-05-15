@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514100106) do
+ActiveRecord::Schema.define(:version => 20130515074835) do
+
+  create_table "cloud_user_histories", :force => true do |t|
+    t.datetime "updated_at", :null => false
+    t.boolean  "status"
+    t.string   "admin"
+    t.string   "admin_ip"
+    t.datetime "created_at", :null => false
+  end
 
   create_table "cloud_users", :force => true do |t|
     t.datetime "created_at",                                :null => false

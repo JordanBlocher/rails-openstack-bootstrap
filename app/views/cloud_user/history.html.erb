@@ -1,0 +1,36 @@
+<% content_for :head do %>
+<%= stylesheet_link_tag 'dashboard-base.css.scss' -%>
+<% end %>
+
+
+<%= content_tag :div, :class => "dashboard" do -%>
+
+    <%= image_tag("keys.jpg", :alt=>"")%>
+        <%= content_tag :div, :class => "container" do -%>
+        <%= content_tag :div, :class => "dashboard-caption" do -%>
+        <h1> Cloud Users </h1>
+        <% end %>
+        <% end %>
+    <% end %>
+
+
+<%= content_tag :div, :class => "container-fluid" do -%>
+<%= content_tag :div, :class => "row-fluid" do -%>
+
+<%= content_tag :div, :class => "span2" do -%>
+
+<%= button_to "Cloud Users", cloud_user_index_path, :method => "get", :class => "btn btn-primary disabled"%>
+<%= button_to "Group Rules", security_group_rules_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Keypairs", key_pairs_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Openstack Users", users_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Openstack Users", users_path, :method => "get", :class => "btn btn-primary"%>
+
+<% end %>
+
+<%= content_tag :div, :class => "span10" do -%>
+
+<%= render 'cloud_user/history' %>
+
+<% end %>
+<% end %>
+<% end %>

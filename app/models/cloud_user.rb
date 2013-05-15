@@ -12,6 +12,6 @@ class CloudUser < App
 
   has_many :virtual_interface_cloud_user_associations
   has_many :user_cloud_user_associations
-
+  has_one :cloud_user_history
 
 end
