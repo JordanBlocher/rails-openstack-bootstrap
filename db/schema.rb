@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427081122) do
+ActiveRecord::Schema.define(:version => 20130514100106) do
 
   create_table "cloud_users", :force => true do |t|
     t.datetime "created_at",                                :null => false
@@ -27,9 +27,30 @@ ActiveRecord::Schema.define(:version => 20130427081122) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.boolean  "admin",                  :default => false
+    t.string   "name"
+    t.string   "username"
   end
 
   add_index "cloud_users", ["email"], :name => "index_cloud_users_on_email", :unique => true
   add_index "cloud_users", ["reset_password_token"], :name => "index_cloud_users_on_reset_password_token", :unique => true
+
+  create_table "user_cloud_user_associations", :force => true do |t|
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.datetime "deleted_at"
+    t.boolean  "deleted"
+    t.string   "user_id"
+    t.string   "cloud_user_id"
+    t.string   "role"
+    t.boolean  "is_openstack_admin"
+    t.boolean  "is_cloud_admin"
+  end
+
+  create_table "virtual_interface_cloud_user_associations", :force => true do |t|
+    t.string   "shared_ip"
+    t.datetime "created_at", :null => false
+    t.datetime "deleted_at"
+    t.datetime "updated_at", :null => false
+  end
 
 end

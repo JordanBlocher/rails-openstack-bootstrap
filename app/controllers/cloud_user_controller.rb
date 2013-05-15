@@ -21,6 +21,15 @@ class CloudUserController < ApplicationController
 
   def upgrade
     @cloud_user = CloudUser.find(params[:id])
+      username = @cloud_user.username
+      insert = "INSERT INTO `username` VALUES ( NOW, True);"
+    if App.table_exists? @cloud_user.username
+      App.execute(insert)
+    else
+      create = "CREATE TABLE `username` ( date_admin datetime, admin_status boolean);"
+      App.connection.execute(create)
+      App.connection.execute(insert)
+    end
     if @cloud_user.update_attribute :admin, true
       redirect_to :back, :notice => "Cloud User added to Admins." 
     end
@@ -28,6 +37,16 @@ class CloudUserController < ApplicationController
  
  def downgrade
     @cloud_user = CloudUser.find(params[:id])
+      username = @cloud_user.username
+      insert = "INSERT INTO `username` VALUES ( NOW, False)"
+    if App.table_exists? @cloud_user.username
+      App.execute(insert)
+    else
+      create = "CREATE TABLE `username` ( date_admin datetime, admin_status boolean);"
+      App.execute(create)
+      App.execute(insert)
+    end
+ 
     if @cloud_user.update_attribute :admin, false
       redirect_to :back, :notice => "CloudUser removed from Admins."
     end

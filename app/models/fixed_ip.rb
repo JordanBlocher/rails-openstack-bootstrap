@@ -1,5 +1,9 @@
 class FixedIp < Nova
   attr_accessible :address, :allocated, :created_at, :deleted, :deleted_at, :host, :instance_id, :leased, :network_id, :reserved, :updated_at, :virtual_interface_id
 
-  belongs_to :virtual_interface
+  scope :fixed_active, where("allocated=?", 1)
+  scope :fixed_inactive, where("allocated=?", 0)
+
+  has_many :floating_ips
+  has_many :instances
 end

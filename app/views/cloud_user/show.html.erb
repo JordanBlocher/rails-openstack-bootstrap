@@ -1,4 +1,11 @@
+<div class="box-center">
 <p id="notice"><%= notice %></p>
+
+<p>
+  <h1>
+  <%= @cloud_user.username %>
+  </h1>
+</p>
 
 <p>
   <b>Email:</b>
@@ -45,10 +52,18 @@
   <%= @cloud_user.admin %>
 </p>
 
-<% if cloud_user.admin? %>
-<%= link_to('Remove from Admins', downgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
-<%else%>
-<%= link_to('Add to Admins', upgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
-<%end%>
+<p>
+<%= link_to 'Edit Account', edit_cloud_user_registration_path, :class => "btn btn-primary" %>
+</p>
 
+<p>
+<% if current_cloud_user.admin? %>
+<% if @cloud_user.admin? %>
+<%= link_to('Remove from Admins', downgrade_cloud_user_path(@cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+<%else%>
+<%= link_to('Add to Admins', upgrade_cloud_user_path(@cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+<%end%>
+<%end%>
+</p>
+</div>
 <%= link_to 'Back', cloud_user_index_path %>

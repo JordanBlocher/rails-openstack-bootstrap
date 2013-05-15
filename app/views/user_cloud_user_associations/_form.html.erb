@@ -1,0 +1,53 @@
+<%= form_for(@user_cloud_user_association) do |f| %>
+  <% if @user_cloud_user_association.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_cloud_user_association.errors.count, "error") %> prohibited this user_cloud_user_association from being saved:</h2>
+
+      <ul>
+      <% @user_cloud_user_association.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted %><br />
+    <%= f.check_box :deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cloud_user_id %><br />
+    <%= f.text_field :cloud_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.text_field :role %>
+  </div>
+  <div class="field">
+    <%= f.label :is_openstack_admin %><br />
+    <%= f.check_box :is_openstack_admin %>
+  </div>
+  <div class="field">
+    <%= f.label :is_cloud_admin %><br />
+    <%= f.check_box :is_cloud_admin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

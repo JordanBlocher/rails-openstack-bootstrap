@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Shared ip:</b>
+  <%= @virtual_interface_cloud_user_association.shared_ip %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @virtual_interface_cloud_user_association.created_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @virtual_interface_cloud_user_association.deleted_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_virtual_interface_cloud_user_association_path(@virtual_interface_cloud_user_association) %> |
+<%= link_to 'Back', virtual_interface_cloud_user_associations_path %>

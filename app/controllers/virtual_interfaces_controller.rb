@@ -1,9 +1,7 @@
 class VirtualInterfacesController < ApplicationController
   before_filter :authenticate_cloud_user!
 
-  # GET /virtual_interfaces
-  # GET /virtual_interfaces.json
-  def index
+ def index
     @virtual_interfaces = VirtualInterface.all
 
     respond_to do |format|
@@ -11,7 +9,7 @@ class VirtualInterfacesController < ApplicationController
       format.json { render json: @virtual_interfaces }
     end
   end
-
+ 
   # GET /virtual_interfaces/1
   # GET /virtual_interfaces/1.json
   def show

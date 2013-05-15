@@ -1,0 +1,2 @@
+module VirtualInterfaceCloudUserAssociationsHelper
+end

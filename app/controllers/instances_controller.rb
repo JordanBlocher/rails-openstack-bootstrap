@@ -4,7 +4,7 @@ class InstancesController < ApplicationController
   # GET /instances
   # GET /instances.json
   def index
-    @instances = Instance.where("vm_state =? OR vm_state =?", "active", "building")
+    @instances = Instance.instances_active
 
     respond_to do |format|
       format.html # index.html.erb

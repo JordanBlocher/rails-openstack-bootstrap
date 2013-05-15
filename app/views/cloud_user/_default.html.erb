@@ -1,5 +1,6 @@
 <table class="table table-bordered">
   <tr>
+    <th>Username</th>
     <th>Email</th>
     <th>Sign in Count</th>
     <th>Current Sign in</th>
@@ -11,26 +12,29 @@
     <th>Updated at</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @cloud_user.each do |cloud_user| %>
   <tr>
-    <td><%= cloud_user.email %></br></br>
-    <% if cloud_user.admin? %>
-    <%= link_to('Remove from Admins', downgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
-    <%else%>
-    <%= link_to('Add to Admins', upgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
-    <%end%>
-    <td><%= cloud_user.sign_in_count %></td>
+    <td><%= cloud_user.username %></td>
+    <td><%= cloud_user.email %></td>
+   <td><%= cloud_user.sign_in_count %></td>
     <td><%= cloud_user.current_sign_in_at %></td>
     <td><%= cloud_user.last_sign_in_at %></td>
     <td><%= cloud_user.current_sign_in_ip %></td>
     <td><%= cloud_user.last_sign_in_ip %></td>
-    <td><%= cloud_user.admin %></td>
+    <td>
+    <% if cloud_user.admin? %>
+    <%= link_to('Remove from Admins', downgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+    <%else%>
+    <%= link_to('Add to Admins', upgrade_cloud_user_path(cloud_user), :remote => :true, :class => "btn btn-warning") %></td>
+    <%end%></td>
     <td><%= cloud_user.created_at %></td>
     <td><%= cloud_user.updated_at %></td>
     <td><%= link_to 'Show', cloud_user %></td>
+    <% if current_cloud_user == cloud_user %>
+    <td><%= link_to 'Edit', edit_cloud_user_registration_path %></td>
+    <%end%>
   </tr>
 <% end %>
 </table>

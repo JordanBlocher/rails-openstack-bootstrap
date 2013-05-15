@@ -1,0 +1,39 @@
+<h1>Listing user_cloud_user_associations</h1>
+
+<table>
+  <tr>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Deleted at</th>
+    <th>Deleted</th>
+    <th>User</th>
+    <th>Cloud user</th>
+    <th>Role</th>
+    <th>Is openstack admin</th>
+    <th>Is cloud admin</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_cloud_user_associations.each do |user_cloud_user_association| %>
+  <tr>
+    <td><%= user_cloud_user_association.created_at %></td>
+    <td><%= user_cloud_user_association.updated_at %></td>
+    <td><%= user_cloud_user_association.deleted_at %></td>
+    <td><%= user_cloud_user_association.deleted %></td>
+    <td><%= user_cloud_user_association.user_id %></td>
+    <td><%= user_cloud_user_association.cloud_user_id %></td>
+    <td><%= user_cloud_user_association.role %></td>
+    <td><%= user_cloud_user_association.is_openstack_admin %></td>
+    <td><%= user_cloud_user_association.is_cloud_admin %></td>
+    <td><%= link_to 'Show', user_cloud_user_association %></td>
+    <td><%= link_to 'Edit', edit_user_cloud_user_association_path(user_cloud_user_association) %></td>
+    <td><%= link_to 'Destroy', user_cloud_user_association, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User cloud user association', new_user_cloud_user_association_path %>

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created at:</b>
+  <%= @user_cloud_user_association.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @user_cloud_user_association.updated_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @user_cloud_user_association.deleted_at %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @user_cloud_user_association.deleted %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @user_cloud_user_association.user_id %>
+</p>
+
+<p>
+  <b>Cloud user:</b>
+  <%= @user_cloud_user_association.cloud_user_id %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @user_cloud_user_association.role %>
+</p>
+
+<p>
+  <b>Is openstack admin:</b>
+  <%= @user_cloud_user_association.is_openstack_admin %>
+</p>
+
+<p>
+  <b>Is cloud admin:</b>
+  <%= @user_cloud_user_association.is_cloud_admin %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_cloud_user_association_path(@user_cloud_user_association) %> |
+<%= link_to 'Back', user_cloud_user_associations_path %>

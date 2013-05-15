@@ -4,7 +4,7 @@ class FloatingIpsController < ApplicationController
   # GET /floating_ips
   # GET /floating_ips.json
   def index
-    @floating_ips = FloatingIp.where(FloatingIp.arel_table[:fixed_ip_id].not_eq(nil));
+    @floating_ips = FloatingIp.floating_active
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class FloatingIpsController < ApplicationController
   # GET /floating_ips
   # GET /floating_ips.json
   def unassigned
-    @floating_ips = FloatingIp.where(FloatingIp.arel_table[:fixed_ip_id].eq(nil));
+    @floating_ips = FloatingIp.floating_inactive
 
     respond_to do |format|
       format.html # index.html.erb

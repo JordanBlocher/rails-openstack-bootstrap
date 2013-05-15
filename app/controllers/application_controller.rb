@@ -3,9 +3,8 @@ class ApplicationController < ActionController::Base
     rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, :alert => exception.message
   end
-  
-  private
 
+  private
 
   # Tell Devise to redirect after sign_in
   def after_sign_in_path_for(resource_or_scope)

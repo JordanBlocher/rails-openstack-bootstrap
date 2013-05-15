@@ -1,6 +1,10 @@
 Cloud::Application.routes.draw do
 
 
+
+  resources :virtual_interface_cloud_user_associations
+
+
   get "home/index"
 
 
@@ -15,11 +19,26 @@ Cloud::Application.routes.draw do
     get 'downgrade', :on => :member
   end
   
-   
 
   resources :instances do
     get 'history', :on => :collection
   end
+
+  resources :virtual_interface_cloud_user_associations do
+    get 'associated_ips', :on => :collection
+  end
+
+
+  resources :user_cloud_user_associations
+
+
+  resources :user_project_associations
+
+
+  resources :user_role_associations
+
+
+  resources :user_project_role_associations
 
 
   resources :security_group_instance_associations 
@@ -34,7 +53,7 @@ Cloud::Application.routes.draw do
   resource :user_project_associations
 
 
-  resources :virtual_interfaces
+  resources :virtual_interfaces 
 
 
   resources :snapshots

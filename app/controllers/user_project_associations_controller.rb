@@ -1,6 +1,4 @@
 class UserProjectAssociationsController < ApplicationController
-  before_filter :authenticate_cloud_user!
-
   # GET /user_project_associations
   # GET /user_project_associations.json
   def index

@@ -4,7 +4,7 @@ class FixedIpsController < ApplicationController
   # GET /fixed_ips
   # GET /fixed_ips.json
   def index
-    @fixed_ips = FixedIp.where("allocated=?", 1);
+    @fixed_ips = FixedIp.fixed_active
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class FixedIpsController < ApplicationController
   # GET /fixed_ips
   # GET /fixed_ips.json
   def unassigned
-    @fixed_ips = FixedIp.where("allocated=?", 0);
+    @fixed_ips = FixedIp.fixed_inactive
 
     respond_to do |format|
       format.html # index.html.erb

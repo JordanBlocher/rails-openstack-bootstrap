@@ -1,0 +1,29 @@
+<%= form_for(@virtual_interface_cloud_user_association) do |f| %>
+  <% if @virtual_interface_cloud_user_association.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@virtual_interface_cloud_user_association.errors.count, "error") %> prohibited this virtual_interface_cloud_user_association from being saved:</h2>
+
+      <ul>
+      <% @virtual_interface_cloud_user_association.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shared_ip %><br />
+    <%= f.text_field :shared_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_at %><br />
+    <%= f.datetime_select :deleted_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
