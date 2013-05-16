@@ -57,6 +57,10 @@
 </p>
 
 <p>
+<%= button_to 'History', history_cloud_user_path(@cloud_user), :method => "get", :class => "btn btn-info" %>
+</p>
+
+<p>
 <% if current_cloud_user.admin? %>
 <% if @cloud_user.admin? %>
 <%= link_to('Remove from Admins', downgrade_cloud_user_path(@cloud_user), :remote => :true, :class => "btn btn-warning") %></td>

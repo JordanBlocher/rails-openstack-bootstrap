@@ -8,7 +8,7 @@
     <%= image_tag("keys.jpg", :alt=>"")%>
         <%= content_tag :div, :class => "container" do -%>
         <%= content_tag :div, :class => "dashboard-caption" do -%>
-        <h1> History </h1>
+        <h1> Created in the Last Day </h1>
         <% end %>
         <% end %>
     <% end %>
@@ -28,7 +28,7 @@
 
 <%= content_tag :div, :class => "span10" do -%>
 
-<%= render 'instances/default' %>
+<%= render 'instances/recent' %>
 
 <% end %>
 <% end %>

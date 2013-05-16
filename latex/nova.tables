@@ -1,0 +1,57 @@
++-------------------------------------+
+| Tables_in_nova                      |
++-------------------------------------+
+| agent_builds                        |
+| aggregate_hosts                     |
+| aggregate_metadata                  |
+| aggregates                          |
+| auth_tokens                         |
+| block_device_mapping                |
+| bw_usage_cache                      |
+| cells                               |
+| certificates                        |
+| compute_nodes                       |
+| console_pools                       |
+| consoles                            |
+| dns_domains                         |
+| fixed_ips                           |
+| floating_ips                        |
+| instance_actions                    |
+| instance_faults                     |
+| instance_info_caches                |
+| instance_metadata                   |
+| instance_type_extra_specs           |
+| instance_types                      |
+| instances                           |
+| iscsi_targets                       |
+| key_pairs                           |
+| migrate_version                     |
+| migrations                          |
+| networks                            |
+| projects                            |
+| provider_fw_rules                   |
+| quotas                              |
+| s3_images                           |
+| schema_migrations                   |
+| security_group_instance_association |
+| security_group_rules                |
+| security_groups                     |
+| services                            |
+| sm_backend_config                   |
+| sm_flavors                          |
+| sm_volume                           |
+| snapshots                           |
+| user_project_association            |
+| user_project_role_association       |
+| user_role_association               |
+| users                               |
+| virtual_interfaces                  |
+| virtual_storage_arrays              |
+| volume_metadata                     |
+| volume_type_extra_specs             |
+| volume_types                        |
+| volumes                             |
++-------------------------------------+
+50 rows in set (0.00 sec)
+
+mysql> 

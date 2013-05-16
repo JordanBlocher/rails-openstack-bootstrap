@@ -1,5 +1,6 @@
 class FixedIpsController < ApplicationController
   before_filter :authenticate_cloud_user!
+  around_filter :catch_not_found
 
   # GET /fixed_ips
   # GET /fixed_ips.json
@@ -23,6 +24,21 @@ class FixedIpsController < ApplicationController
     end
   end
 
+  def leased
+  query = "SELECT address, instances.hostname FROM fixed_ips LEFT JOIN instances ON fixed_ips.instance_id = instances.id WHERE instances.created_at > (NOW() - INTERVAL 1 DAY);"
+  @hash = Nova.connection.select_all(query)
+  if @hash.blank? 
+    redirect_to :back, :notice => "No fixed IPs have been recently leased."
+  end
+  end
+
+  def released
+  query = "SELECT address, instances.hostname FROM fixed_ips LEFT JOIN instances ON fixed_ips.instance_id = instances.id WHERE instances.deleted_at > (NOW() - INTERVAL 1 DAY);"
+  @hash = Nova.connection.select_all(query)
+  if @hash.blank?
+    redirect_to :back, :notice => "No fixed IPs have been recently released."
+  end
+  end
 
   # GET /fixed_ips/1
   # GET /fixed_ips/1.json

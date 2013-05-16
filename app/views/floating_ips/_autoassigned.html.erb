@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Address</th>
+    <th>Project Name</th>
+  </tr>
+  <% @hash.each do |key, value| %>
+  <tr>
+    <td><%= key["address"] %></td>
+    <td><%= key["name"] %></td>
+  </tr>
+<% end %>
+
+</table>
+
+<br />
+

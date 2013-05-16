@@ -23,7 +23,7 @@ class CloudUserController < ApplicationController
     @cloud_user = CloudUser.find(params[:id])
     username = @cloud_user.username
     if App.connection.table_exists? username
-    @history = App.connection.select_all("SELECT * FROM \"#{username}\" WHERE updated_at = (SELECT max(updated_at) FROM \"#{username}\" );")
+    @hash = App.connection.select_all("SELECT * FROM \"#{username}\" WHERE updated_at = (SELECT max(updated_at) FROM \"#{username}\" );")
     else 
       redirect_to :back, :notice => "No History for this User."
     end
@@ -32,9 +32,9 @@ class CloudUserController < ApplicationController
   def upgrade
     @cloud_user = CloudUser.find(params[:id])
       username = @cloud_user.username
-      insert = "INSERT INTO \"#{username}\" (updated_at, status, admin, admin_ip) VALUES (CURRENT_TIMESTAMP, True, '#{current_cloud_user.username}', '#{current_cloud_user.current_sign_in_ip}');"
+      query = "INSERT INTO \"#{username}\" (updated_at, status, admin, admin_ip) VALUES (CURRENT_TIMESTAMP, True, '#{current_cloud_user.username}', '#{current_cloud_user.current_sign_in_ip}');"
     if App.connection.table_exists? username
-      App.connection.execute(insert)
+      App.connection.execute(query)
     else
       App.connection.create_table(username) do |t|
         t.column :updated_at, :datetime
@@ -42,7 +42,7 @@ class CloudUserController < ApplicationController
         t.column :admin, :string
         t.column :admin_ip, :string
       end
-      App.connection.execute(insert)
+      App.connection.execute(query)
     end
     
     if @cloud_user.update_attribute :admin, true
@@ -53,9 +53,9 @@ class CloudUserController < ApplicationController
  def downgrade
     @cloud_user = CloudUser.find(params[:id])
       username = @cloud_user.username
-      insert = "INSERT INTO \"#{username}\" (updated_at, status, admin, admin_ip) VALUES (CURRENT_TIMESTAMP, False, '#{current_cloud_user.username}', '#{current_cloud_user.current_sign_in_ip}');"
+      query = "INSERT INTO \"#{username}\" (updated_at, status, admin, admin_ip) VALUES (CURRENT_TIMESTAMP, False, '#{current_cloud_user.username}', '#{current_cloud_user.current_sign_in_ip}');"
     if App.connection.table_exists? username
-      App.connection.execute(insert)
+      App.connection.execute(query)
     else
        App.connection.create_table(username) do |t|
          t.column :updated_at, :datetime
@@ -63,7 +63,7 @@ class CloudUserController < ApplicationController
          t.column :admin, :string
          t.column :admin_ip, :string
        end
-       App.connection.execute(insert)
+       App.connection.execute(query)
     end
  
     if @cloud_user.update_attribute :admin, false

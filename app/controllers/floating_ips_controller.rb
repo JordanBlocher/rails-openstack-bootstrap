@@ -1,5 +1,6 @@
 class FloatingIpsController < ApplicationController
   before_filter :authenticate_cloud_user!
+  around_filter :catch_not_found
 
   # GET /floating_ips
   # GET /floating_ips.json
@@ -23,6 +24,13 @@ class FloatingIpsController < ApplicationController
     end
   end
 
+  def autoassigned
+  query = "SELECT address, projects.name FROM floating_ips LEFT JOIN projects ON floating_ips.project_id = projects.id WHERE auto_assigned = 1;"
+  @hash = Nova.connection.select_all(query)
+  if @hash.blank?
+    redirect_to :back, :notice => "No floating IPs have been auto assigned."
+  end
+  end
 
   # GET /floating_ips/1
   # GET /floating_ips/1.json

@@ -20,7 +20,8 @@
 <%= content_tag :div, :class => "span2" do -%>
 
 <%= button_to "Instances", instances_path, :method => "get", :class => "btn btn-primary disabled"%>
-<%= button_to "History", history_instances_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Latest", recent_instances_path, :method => "get", :class => "btn btn-info"%>
+<%= button_to "History", history_instances_path, :method => "get", :class => "btn btn-info"%>
 <%= button_to "Flavors", instance_types_path, :method => "get", :class => "btn btn-primary"%>
 <%= button_to "Cache", instance_info_caches_path, :method => "get", :class => "btn btn-primary"%>
 

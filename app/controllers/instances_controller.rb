@@ -1,5 +1,6 @@
 class InstancesController < ApplicationController
   before_filter :authenticate_cloud_user!
+  around_filter :catch_not_found
 
   # GET /instances
   # GET /instances.json
@@ -22,7 +23,15 @@ class InstancesController < ApplicationController
       format.json { render json: @instances }
     end
   end
-  
+
+  def recent
+  query ="SELECT display_name, users.name, instances.created_at FROM instances LEFT JOIN users ON instances.user_id = users.id WHERE instances.created_at > (NOW() - INTERVAL 1 DAY);"
+  @hash = Nova.connection.select_all(query)
+  if @hash.blank?
+    redirect_to :back, :notice => "No instances have been created in the last day."
+  end
+  end
+
   # GET /instances/1
   # GET /instances/1.json
   def show

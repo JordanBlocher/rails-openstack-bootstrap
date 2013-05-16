@@ -1,0 +1,10 @@
++------------------+
+| Tables_in_glance |
++------------------+
+| image_members    |
+| image_properties |
+| images           |
+| migrate_version  |
++------------------+
+4 rows in set (0.00 sec)
+

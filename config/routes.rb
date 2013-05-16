@@ -1,9 +1,6 @@
 Cloud::Application.routes.draw do
 
 
-  resources :virtual_interface_cloud_user_associations
-
-
   get "home/index"
 
 
@@ -22,6 +19,7 @@ Cloud::Application.routes.draw do
 
   resources :instances do
     get 'history', :on => :collection
+    get 'recent', :on => :collection
   end
 
   resources :virtual_interface_cloud_user_associations 
@@ -83,11 +81,14 @@ Cloud::Application.routes.draw do
 
   resources :floating_ips do
     get 'unassigned', :on => :collection
+    get 'autoassigned', :on => :collection
   end
 
 
   resources :fixed_ips do
     get 'unassigned', :on => :collection
+    get 'leased', :on => :collection
+    get 'released', :on => :collection
   end
 
 

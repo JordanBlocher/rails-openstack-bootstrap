@@ -6,22 +6,21 @@
 
   
 <%= content_tag :div, :class => "dashboard" do -%>
-
 <%= content_tag :div, :class => "container-fluid" do -%>
 <%= content_tag :div, :class => "row-fluid" do -%>
 
-<%= content_tag :div, :class => "span4 offset1" do -%>
 
+<%= content_tag :div, :class => "span4 offset1" do -%>
 <%= button_to "Networks", networks_path, :method => "get", :class => "btn btn-large btn-primary"%>
 <%= button_to "Projects", projects_path, :method => "get", :class => "btn btn-large btn-primary"%>
 <%= button_to "Security", certificates_path, :method => "get", :class => "btn btn-large btn-primary"%>
-<%= link_to "Shared Logins", new_virtual_interface_cloud_user_association_path, :method => "get", :class => "btn btn-large btn-primary"%>
-</br></br></br></br>
-   
+<%= button_to "Shared Logins", new_virtual_interface_cloud_user_association_path, :method => "get", :class => "btn btn-large btn-primary"%>
+<%= button_to "Cloud Instances", instances_path, :method => "get", :class => "btn btn-large btn-cloud"%>
+</br></br>
 <% end %>
 
-<%= content_tag :div, :class => "span4 offset1" do -%>
 
+<%= content_tag :div, :class => "span4 offset1" do -%>
 <%= content_tag :div, :class => "dashboard" do -%>
     <%= image_tag("dash1.jpg", :alt=>"")%>
         <%= content_tag :div, :class => "container" do -%>
@@ -29,26 +28,24 @@
 <%= content_tag :div, :class => "lock" do -%>
         <%= link_to image_tag("lock.jpg", :class => "menu_icon", :alt => "My Account"), cloud_user_path(current_cloud_user) %>
 <% end %>
-<br/><br/></br></br>
-        <%= button_to "Cloud Instances", instances_path, :method => "get", :class => "btn btn-large btn-primary"%>
- 
-        <% end %>
-        <% end %>
-    <% end %>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+
 <% end %>
 
 
-<% end %>
-
-<%= content_tag :div, :class => "span9 offset2" do -%>
+<%= content_tag :div, :class => "span6 offset6" do -%>
 <% if current_cloud_user.admin? %>
 <table><tr><th>
-<th><%= button_to "Cloud Users", cloud_user_index_path, :method => "get", :class => "btn  btn-large btn-info"%><th>&nbsp&nbsp</th>
-<th><%= button_to "Group Rules", security_group_rules_path, :method => "get", :class => "btn btn-large btn-info"%><th>&nbsp&nbsp</th></th>
-<th><%= button_to "Keypairs", key_pairs_path, :method => "get", :class => "btn btn-large btn-info"%><th>&nbsp&nbsp</th></th>
-<th><%= button_to "Openstack Users", users_path, :method => "get", :class => "btn btn-large btn-info"%></th>
+<th><%= button_to "Cloud Users", cloud_user_index_path, :method => "get", :class => "btn  btn-info"%><th>&nbsp&nbsp</th>
+<th><%= button_to "Group Rules", security_group_rules_path, :method => "get", :class => "btn btn-info"%><th>&nbsp&nbsp</th></th>
+<th><%= button_to "Keypairs", key_pairs_path, :method => "get", :class => "btn btn-info"%><th>&nbsp&nbsp</th></th>
+<th><%= button_to "Openstack Users", users_path, :method => "get", :class => "btn btn-info"%></th>
 </tr></table>
 <% end %>
+
 
 <% end %>
 <% end %>

@@ -1,0 +1,16 @@
+                                List of relations
+ Schema |                       Name                       |   Type   |  Owner   
+--------+--------------------------------------------------+----------+----------
+ public | Admin                                            | table    | postgres
+ public | Admin_id_seq                                     | sequence | postgres
+ public | Jordan                                           | table    | postgres
+ public | Jordan_id_seq                                    | sequence | postgres
+ public | cloud_users                                      | table    | postgres
+ public | cloud_users_id_seq                               | sequence | postgres
+ public | schema_migrations                                | table    | postgres
+ public | user_cloud_user_associations                     | table    | postgres
+ public | user_cloud_user_associations_id_seq              | sequence | postgres
+ public | virtual_interface_cloud_user_associations        | table    | postgres
+ public | virtual_interface_cloud_user_associations_id_seq | sequence | postgres
+(11 rows)
+

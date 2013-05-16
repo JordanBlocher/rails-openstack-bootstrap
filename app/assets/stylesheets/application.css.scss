@@ -152,4 +152,24 @@
            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
                 box-shadow: 0 1px 2px rgba(0,0,0,.05);
       }
+      
+      
+     /* Custom Buttons
+    ------------------------- */
+     .btn-cloud {
+          background-color: hsl(222, 100%, 59%) !important;
+          background-repeat: repeat-x;
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b2c9ff", endColorstr="#2d6cfe");
+          background-image: -khtml-gradient(linear, left top, left bottom, from(#b2c9ff), to(#2d6cfe));
+          background-image: -moz-linear-gradient(top, #b2c9ff, #2d6cfe);
+          background-image: -ms-linear-gradient(top, #b2c9ff, #2d6cfe);
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b2c9ff), color-stop(100%, #2d6cfe));
+          background-image: -webkit-linear-gradient(top, #b2c9ff, #2d6cfe);
+          background-image: -o-linear-gradient(top, #b2c9ff, #2d6cfe);
+          background-image: linear-gradient(#b2c9ff, #2d6cfe);
+          border-color: #2d6cfe #2d6cfe hsl(222, 100%, 52.5%);
+          color: #fff !important;
+          text-shadow: 0 1px 1px rgba(255, 255, 255, 0.42);
+          -webkit-font-smoothing: antialiased;
+     }
 

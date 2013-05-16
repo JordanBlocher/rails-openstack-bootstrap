@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
+  def catch_not_found
+    yield
+  rescue ActiveRecord::RecordNotFound
+    redirect_to :back, :notice => "Record not found."
+  end
+
   private
 
   # Tell Devise to redirect after sign_in
