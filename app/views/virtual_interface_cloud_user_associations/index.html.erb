@@ -1,23 +1,35 @@
-<h1>Listing virtual_interface_cloud_user_associations</h1>
-
-<table>
-  <tr>
-    <th>Shared ip</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @virtual_interface_cloud_user_associations.each do |virtual_interface_cloud_user_association| %>
-  <tr>
-    <td><%= virtual_interface_cloud_user_association.shared_ip %></td>
-    <td><%= link_to 'Show', virtual_interface_cloud_user_association %></td>
-    <td><%= link_to 'Edit', edit_virtual_interface_cloud_user_association_path(virtual_interface_cloud_user_association) %></td>
-    <td><%= link_to 'Destroy', virtual_interface_cloud_user_association, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% content_for :head do %>
+<%= stylesheet_link_tag 'dashboard-base.css.scss' -%>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Virtual interface cloud user association', new_virtual_interface_cloud_user_association_path %>
+<%= content_tag :div, :class => "dashboard" do -%>
+
+    <%= image_tag("keys.jpg", :alt=>"")%>
+        <%= content_tag :div, :class => "container" do -%>
+        <%= content_tag :div, :class => "dashboard-caption" do -%>
+        <h1> Current Shared IPs </h1>
+        <% end %>
+        <% end %>
+    <% end %>
+
+
+<%= content_tag :div, :class => "container-fluid" do -%>
+<%= content_tag :div, :class => "row-fluid" do -%>
+
+<%= content_tag :div, :class => "span2" do -%>
+
+<%= button_to "Networks", networks_path, :method => "get", :class => "btn btn-primary disabled"%>
+<%= button_to "Fixed IPs", fixed_ips_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Floating IPs", floating_ips_path, :method => "get", :class => "btn btn-primary"%>
+<%= button_to "Virtual Interfaces", virtual_interfaces_path, :method => "get", :class => "btn btn-primary"%>
+
+<% end %>
+
+<%= content_tag :div, :id =>"view", :class => "span10" do -%>
+
+<%= render 'virtual_interface_cloud_user_associations/default' %>
+
+<% end %>
+<% end %>
+<% end %>

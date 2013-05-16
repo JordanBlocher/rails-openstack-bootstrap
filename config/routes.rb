@@ -1,6 +1,8 @@
 Cloud::Application.routes.draw do
 
 
+  resources :virtual_interface_cloud_user_associations
+
 
   get "home/index"
 
@@ -22,9 +24,7 @@ Cloud::Application.routes.draw do
     get 'history', :on => :collection
   end
 
-  resources :virtual_interface_cloud_user_associations do
-    get 'associated_ips', :on => :collection
-  end
+  resources :virtual_interface_cloud_user_associations 
 
 
   resources :user_cloud_user_associations

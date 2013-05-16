@@ -1,5 +1,6 @@
 <table class="table table-bordered">
   <tr>
+    <th>ID</th>
     <th>Address</th>
     <th>Network</th>
     <th>Instance</th>
@@ -15,6 +16,7 @@
 
 <% @virtual_interfaces.each do |virtual_interface| %>
   <tr>
+    <td><%= virtual_interface.id %></td>
     <td><%= virtual_interface.address %></td>
     <td><%= virtual_interface.network_id %></td>
     <td><%= virtual_interface.instance_id %></td>

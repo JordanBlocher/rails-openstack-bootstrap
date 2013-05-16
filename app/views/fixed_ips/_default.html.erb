@@ -1,6 +1,7 @@
 <table class="table table-bordered">
   <tr>
-   <th>Address</th>
+    <th>ID</th>
+    <th>Address</th>
     <th>Network</th>
     <th>Instance</th>
     <th>Allocated</th>
@@ -19,7 +20,8 @@
 
 <% @fixed_ips.each do |fixed_ip| %>
   <tr>
-   <td><%= fixed_ip.address %></td>
+    <td><%= fixed_ip.id %></td>
+    <td><%= fixed_ip.address %></td>
     <td><%= fixed_ip.network_id %></td>
     <td><%= fixed_ip.instance_id %></td>
     <td><%= fixed_ip.allocated %></td>

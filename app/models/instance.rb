@@ -3,9 +3,8 @@ class Instance < Nova
 
   scope :instances_active, where("vm_state =? OR vm_state =?", "active", "building")
 
-  has_many :security_group_instance_association
-  has_one :fixed_ip
+  has_many :security_group_instance_associations
   has_one :instance_type
-  has_many :virtual_interfaces
+  has_one :instance_info_cache
 
 end

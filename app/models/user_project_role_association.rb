@@ -1,5 +1,5 @@
 class UserProjectRoleAssociation < Nova
-  set_table_name 'nova.user_project_role_association'
+  self.table_name = 'nova.user_project_role_association'
 
   attr_accessible :created_at, :deleted, :deleted_at, :project_id, :role, :updated_at, :user_id
 

@@ -1,11 +1,10 @@
 class VirtualInterfaceCloudUserAssociation < App
+  attr_accessible :cloud_username, :created_at, :deleted_at, :shared_ip, :updated_at, :virtual_interface_id
 
-  attr_accessible :shared_ip, :created_at, :deleted_at
+  alias_attribute :current_sign_in_ip, :shared_ip
+  alias_attribute :address, :shared_ip
 
-  scope :virtual_interface_associated_ips, includes(:joins => (CloudUser.shared==FloatingIp.shared))
-  
-  belongs_to :virtual_interface
   belongs_to :cloud_user
-  belongs_to :floating_ip
+  belongs_to :virtual_interface
 
 end

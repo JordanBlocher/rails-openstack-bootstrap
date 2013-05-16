@@ -12,12 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :shared_ip %><br />
-    <%= f.text_field :shared_ip %>
-  </div>
-  <div class="field">
     <%= f.label :created_at %><br />
     <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :cloud_username %><br />
+    <%= f.text_field :cloud_username %>
+  </div>
+  <div class="field">
+    <%= f.label :virtual_interface_id %><br />
+    <%= f.number_field :virtual_interface_id %>
+  </div>
+  <div class="field">
+    <%= f.label :shared_ip %><br />
+    <%= f.text_field :shared_ip %>
   </div>
   <div class="field">
     <%= f.label :deleted_at %><br />

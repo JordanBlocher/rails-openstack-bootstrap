@@ -18,7 +18,7 @@ class VirtualInterfaceCloudUserAssociationsControllerTest < ActionController::Te
 
   test "should create virtual_interface_cloud_user_association" do
     assert_difference('VirtualInterfaceCloudUserAssociation.count') do
-      post :create, virtual_interface_cloud_user_association: { created_at: @virtual_interface_cloud_user_association.created_at, deleted_at: @virtual_interface_cloud_user_association.deleted_at, shared_ip: @virtual_interface_cloud_user_association.shared_ip }
+      post :create, virtual_interface_cloud_user_association: { cloud_username: @virtual_interface_cloud_user_association.cloud_username, created_at: @virtual_interface_cloud_user_association.created_at, deleted_at: @virtual_interface_cloud_user_association.deleted_at, shared_ip: @virtual_interface_cloud_user_association.shared_ip, updated_at: @virtual_interface_cloud_user_association.updated_at, virtual_interface_id: @virtual_interface_cloud_user_association.virtual_interface_id }
     end
 
     assert_redirected_to virtual_interface_cloud_user_association_path(assigns(:virtual_interface_cloud_user_association))
@@ -35,7 +35,7 @@ class VirtualInterfaceCloudUserAssociationsControllerTest < ActionController::Te
   end
 
   test "should update virtual_interface_cloud_user_association" do
-    put :update, id: @virtual_interface_cloud_user_association, virtual_interface_cloud_user_association: { created_at: @virtual_interface_cloud_user_association.created_at, deleted_at: @virtual_interface_cloud_user_association.deleted_at, shared_ip: @virtual_interface_cloud_user_association.shared_ip }
+    put :update, id: @virtual_interface_cloud_user_association, virtual_interface_cloud_user_association: { cloud_username: @virtual_interface_cloud_user_association.cloud_username, created_at: @virtual_interface_cloud_user_association.created_at, deleted_at: @virtual_interface_cloud_user_association.deleted_at, shared_ip: @virtual_interface_cloud_user_association.shared_ip, updated_at: @virtual_interface_cloud_user_association.updated_at, virtual_interface_id: @virtual_interface_cloud_user_association.virtual_interface_id }
     assert_redirected_to virtual_interface_cloud_user_association_path(assigns(:virtual_interface_cloud_user_association))
   end
 

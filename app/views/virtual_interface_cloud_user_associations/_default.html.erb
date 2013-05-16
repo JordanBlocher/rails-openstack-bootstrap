@@ -1,0 +1,19 @@
+
+<table class="table table-bordered">
+  <tr>
+    <th>Shared IP</th>
+    <th>Cloud User</th>
+    <th>Virtual Interface ID</th>
+  </tr>
+
+<% @virtual_interface_cloud_user_associations.each do |virtual_interface_cloud_user_association| %>
+  <tr>
+    <td><%= virtual_interface_cloud_user_association.shared_ip %></td>
+    <td><%= virtual_interface_cloud_user_association.cloud_username %></td>
+    <td><%= virtual_interface_cloud_user_association.virtual_interface_id %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

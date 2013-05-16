@@ -3,6 +3,5 @@ class User < Nova
 
   has_many :user_project_associations
   has_many :user_role_associations
-  has_many :security_groups
 
 end

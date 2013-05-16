@@ -11,14 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515074835) do
+ActiveRecord::Schema.define(:version => 20130516062504) do
 
-  create_table "cloud_user_histories", :force => true do |t|
-    t.datetime "updated_at", :null => false
+  create_table "Admin", :force => true do |t|
+    t.datetime "updated_at"
     t.boolean  "status"
     t.string   "admin"
     t.string   "admin_ip"
-    t.datetime "created_at", :null => false
+  end
+
+  create_table "Jordan", :force => true do |t|
+    t.datetime "updated_at"
+    t.boolean  "status"
+    t.string   "admin"
+    t.string   "admin_ip"
   end
 
   create_table "cloud_users", :force => true do |t|
@@ -55,10 +61,12 @@ ActiveRecord::Schema.define(:version => 20130515074835) do
   end
 
   create_table "virtual_interface_cloud_user_associations", :force => true do |t|
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "cloud_username"
+    t.integer  "virtual_interface_id"
     t.string   "shared_ip"
-    t.datetime "created_at", :null => false
     t.datetime "deleted_at"
-    t.datetime "updated_at", :null => false
   end
 
 end

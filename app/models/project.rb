@@ -3,5 +3,4 @@ class Project < Nova
 
   has_many :user_project_associations
   has_one :certificate
-  has_one :security_group
 end

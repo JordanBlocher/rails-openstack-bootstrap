@@ -4,6 +4,6 @@ class FixedIp < Nova
   scope :fixed_active, where("allocated=?", 1)
   scope :fixed_inactive, where("allocated=?", 0)
 
+  has_one :virtual_interface
   has_many :floating_ips
-  has_many :instances
 end
