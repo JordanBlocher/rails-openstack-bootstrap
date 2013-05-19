@@ -1,0 +1,17 @@
+#!/bin/sh
+
+IP=$1
+NETIP=$2
+BCAST=$3
+
+printf "
+# The loopback network interface\nauto lo\niface lo inet loopback
+# The primary network interface\nauto eth0\niface eth0 inet dhcp
+# Public Interface\nauto eth1\niface eth1 inet static\n\taddress $IP\n\tnetmask 255.255.0.0\n\tnetwork $NETIP\n\tbroadcast $BCAST" > /etc/network/interfaces
+
+ifconfig eth2 >/dev/null 2>&1
+if [ $? -eq 0 ]
+then
+	printf "
+# Private Interface\nauto eth2\niface eth2 inet manual\n\tup ifconfig eth2 up" >> /etc/network/interfaces
+fi

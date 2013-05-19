@@ -1,0 +1,16 @@
+#!/bin/sh
+
+nova-manage user admin openstack
+nova-manage role add openstack cloudadmin
+nova-manage project create cookbook openstack
+nova-manage project zipfile cookbook openstack
+sudo mkdir ~/openstack
+sudo mv nova.zip ~/openstack
+sudo unzip ~/openstack/nova.zip
+sudo . ~/openstack/novarc
+sudo cp ~/openstack/novarc ~/.novarc
+sudo printf "
+if [ -f ~/.novarc ]; then
+    . ~/.novarc
+fi
+">> ~/.bashrc

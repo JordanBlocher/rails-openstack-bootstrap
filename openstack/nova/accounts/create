@@ -1,0 +1,48 @@
+#!/bin/sh
+
+if [ "$#" = "h" ] ; then 
+    printf "Usage: create USER PROJECT \n"
+    exit 1 
+fi
+
+USER=${1:-openstack}
+PROJECT=${2:-cookbook}
+
+USER_LIST=$(nova-manage user list | tr '\n' ' ')
+PROJECT_LIST=$(nova-manage project list | tr '\n' ' ')
+
+ISUSER=0
+for U in ${USER_LIST[@]}
+do	[ "$K" = "$U" ] && ISUSER=1
+done
+if [ $ISUSER -];
+    then
+        printf "$K already exists."
+    break
+    else
+        nova-manage user create $USER
+        mv nova.zip ~/$USER
+        printf "User $USER created."
+fi
+
+ISPROJECT=0
+for P in ${PROJECT_LIST[@]}
+do	[ "$K" = "$P" ] && ISPROJECT=1
+done
+if [ $ISPROJECT ];
+    then
+        printf "$K already exists."
+        break
+    else 
+        nova-manage project create $PROJECT $USER
+        nova-manage project zipfile $PROJECT $USER
+        mv nova.zip ~/$USER
+        unzip ~/$USER/nova.zip
+        . ~/$USER/novarc       
+        printf "Project $PROJECT created."
+fi
+        
+        
+        
+#nova-manage role add $USER $ROLE
+

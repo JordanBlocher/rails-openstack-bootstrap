@@ -1,0 +1,4 @@
+#!/bin/sh
+
+printf "
+--libvirt_type=quemu" >> /etc/nova/nova-compute.conf

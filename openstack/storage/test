@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sed -i test.txt -e 's/exit 0/print mkdir -p \/var\/run\/swift\nchown swift:swift \/var\/run\/swift\nexit 0/'
+

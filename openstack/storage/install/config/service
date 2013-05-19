@@ -1,0 +1,11 @@
+#!/bin/sh
+
+HASH=$(< /dev/urandom tr -dc A-Za-z0-9_ | head -c16)
+
+touch /etc/swift/swift.conf
+
+printf "
+[swift-hash]
+# Random unique string used on all nodes
+swift_hash_path_suffix = $HASH
+" > /etc/swift/swift.conf

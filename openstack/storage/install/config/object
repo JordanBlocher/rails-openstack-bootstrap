@@ -1,0 +1,31 @@
+#!/bin/sh
+
+touch /etc/swift/object-server/1.conf
+
+printf "
+[DEFAULT]
+devices = /srv/1/node
+mount_check = false
+bind_port = 6010
+user = swift
+log_facility = LOG_LOCAL2
+
+[pipeline:main]
+pipeline = object-server
+
+[app:object-server]
+use = egg:swift#object
+
+[object-replicator]
+vm_test_mode = yes
+
+[object-updater]
+
+[object-auditor]
+" > /etc/swift/object-server/1.conf
+
+sed -e "s/srv\/1/srv\/2/" -e "s/601/602/" -e "s/LOG_LOCAL2/LOG_LOCAL3/" /etc/swift/object-server/1.conf | sudo tee -a /etc/swift/object-server/2.conf >> log/sed.log
+sed -e "s/srv\/1/srv\/3/" -e "s/601/603/" -e "s/LOG_LOCAL2/LOG_LOCAL4/" /etc/swift/object-server/1.conf | sudo tee -a /etc/swift/object-server/3.conf >> log/sed.log
+sed -e "s/srv\/1/srv\/4/" -e "s/601/604/" -e "s/LOG_LOCAL2/LOG_LOCAL5/" /etc/swift/object-server/1.conf | sudo tee -a /etc/swift/object-server/4.conf >> log/sed.log
+
+

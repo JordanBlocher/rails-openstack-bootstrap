@@ -1,0 +1,6 @@
+#!/bin/sh
+
+nova-manage db sync
+nova-manage network create vmnet --fixed_range_v4=10.0.0.0/8 --network_size=32 --bridge_interface=eth2
+
+nova-manage floating create --ip_range=127.0.0.1/24

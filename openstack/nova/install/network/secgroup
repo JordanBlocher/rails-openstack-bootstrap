@@ -1,0 +1,6 @@
+#!/bin/sh
+
+NETIP=$1
+
+nova secgroup-add-rule default tcp 22 22 $NETIP/0
+nova secgroup-add-rule default icmp -1 -1 $NETIP/0

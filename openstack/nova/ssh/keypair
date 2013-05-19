@@ -1,0 +1,11 @@
+#!/bin/sh
+
+elif [ "$#" = "h" ] ; then 
+    printf "Usage: keypair KEY_NAME\n"
+    exit 1 
+fi
+
+KEY=${1:-openstack}
+
+nova keypair-add $KEY > ~/ssh/keys/$KEY.pem
+chmod 0600 ~/ssh/key/$KEY.pem
